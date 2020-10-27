@@ -1,0 +1,7 @@
+TODO:
+
+[] Menu:
+	[] Login
+	[] Register
+	[] Home
+	[] Dnevnik
