@@ -1,0 +1,78 @@
+CRITICAL - 2020-08-10 14:00:15 --> Call to a member function helper() on null
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:45:06 --> Call to a member function query() on null
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include()
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(8): view('register')
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-10 15:45:31 --> Call to a member function query() on null
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include()
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(8): view('register')
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-10 15:47:04 --> Unknown database 'dnevnikUcitelj'
+#0 /opt/lampp/htdocs/zakljucna3/system/Database/BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /opt/lampp/htdocs/zakljucna3/system/Database/BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(8): CodeIgniter\Database\BaseConnection->query('SELECT * FROM d...')
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-10 15:48:02 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:52:00 --> Call to a member function query() on null
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include()
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(9): view('register')
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-10 15:52:34 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:54:54 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::fetch_assoc()
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:56:01 --> Object of class mysqli could not be converted to string
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:56:46 --> Object of class stdClass could not be converted to string
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-10 15:56:47 --> Object of class stdClass could not be converted to string
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

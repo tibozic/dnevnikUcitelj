@@ -1,0 +1,108 @@
+CRITICAL - 2020-08-31 09:39:50 --> Undefined variable: hashed_pass
+#0 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/opt/lampp/htdo...', 28, Array)
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->newUser()
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 09:44:19 --> syntax error, unexpected '}'
+#0 /opt/lampp/htdocs/zakljucna3/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('register/newUse...')
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle('register/newUse...')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 09:46:00 --> Call to undefined function App\Controllers\controller()
+#0 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->newUser()
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-08-31 09:58:11 --> syntax error, unexpected 'endif' (T_ENDIF), expecting end of file
+#0 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#1 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(9): view('register')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-08-31 09:59:12 --> Undefined property: App\Controllers\Register::$validatior
+#0 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/opt/lampp/htdo...', 28, Array)
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->register()
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 10:00:55 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#1 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(48): view('register')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->register()
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-08-31 10:58:12 --> Call to undefined method CodeIgniter\Validation\Validation::listErros()
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include()
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(48): view('register', Array)
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->register()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-31 10:58:31 --> Call to undefined method CodeIgniter\Validation\Validation::listErros()
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include()
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(48): view('register', Array)
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->register()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-08-31 11:33:47 --> syntax error, unexpected 'if' (T_IF)
+#0 /opt/lampp/htdocs/zakljucna3/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('register/regist...')
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle('register/regist...')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 11:34:27 --> syntax error, unexpected 'if' (T_IF)
+#0 /opt/lampp/htdocs/zakljucna3/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('register/regist...')
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle('register/regist...')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 11:39:51 --> vail_email is not a valid rule.
+#0 /opt/lampp/htdocs/zakljucna3/system/Validation/Validation.php(302): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('vail_email')
+#1 /opt/lampp/htdocs/zakljucna3/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('email', 'email', 'a', Array, Array)
+#2 /opt/lampp/htdocs/zakljucna3/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(53): CodeIgniter\Controller->validate(Array, Array)
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->register()
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-08-31 12:02:04 --> syntax error, unexpected '}'
+#0 /opt/lampp/htdocs/zakljucna3/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('login')
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle('login')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 12:08:15 --> syntax error, unexpected ')'
+#0 /opt/lampp/htdocs/zakljucna3/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute('login')
+#1 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle('login')
+#2 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-08-31 12:24:53 --> Invalid file: /templates/header.php
+#0 /opt/lampp/htdocs/zakljucna3/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/templates/head...')
+#1 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('/templates/head...', Array, true)
+#2 /opt/lampp/htdocs/zakljucna3/app/Controllers/Home.php(10): view('/templates/head...', Array)
+#3 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Home->index()
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

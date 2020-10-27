@@ -1,0 +1,10 @@
+CRITICAL - 2020-08-29 16:48:18 --> Undefined variable: db
+#0 /opt/lampp/htdocs/zakljucna3/app/Views/register.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/opt/lampp/htdo...', 43, Array)
+#1 /opt/lampp/htdocs/zakljucna3/system/View/View.php(246): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/zakljucna3/system/Common.php(1087): CodeIgniter\View\View->render('register', Array, true)
+#3 /opt/lampp/htdocs/zakljucna3/app/Controllers/Register.php(9): view('register')
+#4 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(914): App\Controllers\Register->index()
+#5 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 /opt/lampp/htdocs/zakljucna3/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /opt/lampp/htdocs/zakljucna3/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
