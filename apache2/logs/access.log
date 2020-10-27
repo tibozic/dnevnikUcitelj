@@ -358,3 +358,12 @@
 127.0.0.1 - - [27/Oct/2020:11:48:07 +0100] "POST /phpmyadmin/ajax.php HTTP/1.1" 200 1515
 127.0.0.1 - - [27/Oct/2020:11:48:07 +0100] "POST /phpmyadmin/ajax.php HTTP/1.1" 200 1410
 127.0.0.1 - - [27/Oct/2020:11:48:08 +0100] "GET /phpmyadmin/index.php?ajax_request=1&recent_table=1&no_debug=true&_nocache=1603795688951491716&token=224d7d69755b5a4a5279703e7b486545 HTTP/1.1" 200 1483
+127.0.0.1 - - [27/Oct/2020:12:10:10 +0100] "GET /public/register HTTP/1.1" 200 1926
+127.0.0.1 - - [27/Oct/2020:12:10:10 +0100] "GET /CSS/style2.css HTTP/1.1" 404 196
+127.0.0.1 - - [27/Oct/2020:12:10:10 +0100] "GET /index.php?debugbar HTTP/1.1" 404 196
+127.0.0.1 - - [27/Oct/2020:12:10:10 +0100] "GET /images/notebook_normal.jpg HTTP/1.1" 404 196
+127.0.0.1 - - [27/Oct/2020:12:10:13 +0100] "POST /public/register/register HTTP/1.1" 500 178306
+127.0.0.1 - - [27/Oct/2020:12:10:14 +0100] "GET /public/register HTTP/1.1" 200 1926
+127.0.0.1 - - [27/Oct/2020:12:11:58 +0100] "POST /phpmyadmin/index.php HTTP/1.1" 200 1491
+127.0.0.1 - - [27/Oct/2020:12:14:59 +0100] "POST /public/register/register HTTP/1.1" 500 178221
+127.0.0.1 - - [27/Oct/2020:12:15:10 +0100] "GET /phpmyadmin/themes/pmahomme/img/b_spatial.png HTTP/1.1" 200 376
