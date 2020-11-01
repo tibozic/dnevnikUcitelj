@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
-use App\Models\UciteljModel;
+use \Config\Database;
+use App\Cotrollers;
 
 class Login extends BaseController
 {
@@ -34,26 +35,29 @@ class Login extends BaseController
 			if (! $this->validate($pravila,$opozorila)) {
 				$data['validation']=$this->validator;
 			}else {
-				$model=new UciteljModel();
-				$user=$model->where('emailUporabnik',$this->request->getVar('emailUporabnik'))
-							->first();
-				echo $user;
-				$this->setUserSession($user);
-				return redirect()->to('home');
+				$email=$_POST['email'];
+				$this->setUserSession($email);
 
+				//echo 'SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik='.$email;
+				return redirect()->to('/public/home');
 			}
 
 		}
 		return view('login',$data);
 	}
 
-	private function setUserSession($user){
+	private function setUserSession($email){
+		$db = \Config\Database::connect();
+		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik LIKE '$email'";
+		$query = $db->query($builder);
+		$results=$query->getResult();
+
 		$data=[
-			'idUporabnik'=>$user['idUporabnik'],
-			'imeUporabnik'=>$user['imeUporabnik'],
-			'priimekUporabnik'=>$user['priimekUporabnik'],
-			'emailUporabnik'=>$user['emailUporabnik'],
-			'vlogaUporabnik'=>$user['Vloga_idVloga'],
+			'idUporabnik'=>$results[0]->idUporabnik,
+			'imeUporabnik'=>$results[0]->imeUporabnik,
+			'priimekUporabnik'=>$results[0]->priimekUporabnik,
+			'emailUporabnik'=>$results[0]->emailUporabnik,
+			'vlogaUporabnik'=>$results[0]->nazivVloga,
 			'jePrijavljen'=>true,
 		];
 
@@ -62,3 +66,16 @@ class Login extends BaseController
 	}
 
 }
+
+
+
+/*
+array(1) { 
+[0]=> object(stdClass)#71 (5) {
+ ["idUporabnik"]=> string(1) "2" 
+ ["imeUporabnik"]=> string(4) "test" 
+ ["priimekUporabnik"]=> string(4) "test" 
+ ["emailUporabnik"]=> string(14) "test@gmail.com" 
+ ["nazivVloga"]=> string(9) "BrezVloge" 
+} } 
+*/

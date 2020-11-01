@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/public/CSS/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="assets/CSS/style.css">
 <meta charset="UTF-8">
 <title><?= $title ?></title>
-
+<?php $db = \Config\Database::connect(); ?>
 </head>
 
 <body>

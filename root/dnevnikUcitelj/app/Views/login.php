@@ -1,8 +1,8 @@
 <!DOCTYPE hmtl>
 <html> 
 <head>
-<link rel="stylesheet" href="/public/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/CSS/style2.css">
+<link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
 
 </head>
 <body>

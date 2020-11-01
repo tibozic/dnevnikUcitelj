@@ -2,8 +2,7 @@
 
 class Home extends BaseController
 {
-	public function index()
-	{
+	public function index(){
 		$data=[
 			"title"=>"Domov",
 		];
