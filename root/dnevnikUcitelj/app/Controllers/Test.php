@@ -4,7 +4,12 @@ class Test extends BaseController
 {
 	public function index()
 	{
-		return view('test');
+		$data=[
+			'title'=>'Test',
+		];
+		echo view('header',$data);
+		echo view('test');
+		echo view('footer');
 	}
 
 	//--------------------------------------------------------------------

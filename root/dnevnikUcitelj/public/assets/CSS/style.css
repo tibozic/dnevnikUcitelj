@@ -1,3 +1,36 @@
+
+
+
+
+/* MENU */
+
+.menu{
+	background-color:#4caf50;
+}
+
+.vsebina{
+	color:white;
+}
+
+.menu .vsebina:hover{
+	color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PRIJAVA / REGISTRACIJA */
+
 .form-start{
 	width:300px;
 	margin-top:20px;
@@ -7,26 +40,6 @@
 	padding-bottom:10px;
 	background-color:#D1D1D1;
 }
-
-
-#menu_list{
-	padding-top:0.5%;
-	padding-bottom:0.5%;
-	padding-left:5%;
-	background-color:#8CEE9F;
-}
-
-#menu_list li{
-	display:inline;
-	padding-right:3%;
-}
-#menu_list a{
-	text-decoration:none;
-	color:green;
-	font-weight:bold;
-	font-size:18px;
-}
-
 
 .register_error ul{
 	background-color:#E95050;
@@ -38,7 +51,7 @@
 
 #prijava_link{
 	text-decoration:none;
-	font-style:italic;
+	color:black;
 }
 
 

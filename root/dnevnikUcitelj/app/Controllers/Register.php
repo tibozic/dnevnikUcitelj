@@ -19,7 +19,7 @@ class Register extends BaseController
 			$pravila=[
 				'ime'=>'required|min_length[3]|max_length[25]',
 				'priimek'=>'required|min_length[3]|max_length[25]',
-				'email'=>'required|valid_email|is_unique[ucitelj.emailUcitelj]',
+				'email'=>'required|valid_email|is_unique[uporabnik.emailUporabnik]',
 				'geslo'=>'required|min_length[8]|max_length[50]',
 				'potrdi_geslo'=>'matches[geslo]',
 			];

@@ -5,7 +5,7 @@
 </head>
 <body>
 	<div class="container">
-		<h1>This is test.php</h1>
+		<h1>This is a test</h1>
 	</div>
 </body>
 </html>

@@ -19,7 +19,7 @@ class Register extends BaseController
 			$pravila=[
 				'ime'=>'required|min_length[3]|max_length[25]',
 				'priimek'=>'required|min_length[3]|max_length[25]',
-				'email'=>'required|valid_email|is_unique[ucitelj.emailUcitelj]',
+				'email'=>'required|valid_email|is_unique[uporabnik.emailUporabnik]',
 				'geslo'=>'required|min_length[8]|max_length[50]',
 				'potrdi_geslo'=>'matches[geslo]',
 			];
@@ -58,10 +58,10 @@ class Register extends BaseController
 				$hashed_pass=password_hash($pass, PASSWORD_BCRYPT);
 
 				$data=array(
-					'imeUcitelj' => $this->request->getPost('ime'),
-					'priimekUcitelj' => $this->request->getPost('priimek'),
-					'emailUcitelj' => $this->request->getPost('email'),
-					'gesloUcitelj' => $hashed_pass,
+					'imeUporabnik' => $this->request->getPost('ime'),
+					'priimekUporabnik' => $this->request->getPost('priimek'),
+					'emailUporabnik' => $this->request->getPost('email'),
+					'gesloUporabnik' => $hashed_pass,
 					'Vloga_idVloga' => 5,
 				);
 				
@@ -74,6 +74,8 @@ class Register extends BaseController
 
 		return view('register',$data);
 	}
+
+	
 
 	//--------------------------------------------------------------------
 }

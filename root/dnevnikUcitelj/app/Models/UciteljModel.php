@@ -4,8 +4,8 @@ use CodeIgniter\Model;
 
 class UciteljModel extends Model
 {
-	protected $table='uproabnik';
-	protected $primatyKey='idUporabnik';
+	protected $table='uporabnik';
+	protected $primaryKey='idUporabnik';
 
 	protected $allowedFields=['imeUporabnik','priimekUporabnik','emailUporabnik','gesloUporabnik','Vloga_idVloga'];
 

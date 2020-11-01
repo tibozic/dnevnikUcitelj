@@ -290,6 +290,6 @@ class __TwigTemplate_ebaaf969206d387455958ac8af4bb38c02d926321d0135dd27db935dc3c
 
     public function getSourceContext()
     {
-        return new Source("", "database/structure/body_for_table_summary.twig", "D:\\USBWebserver v8.6\\phpmyadmin\\templates\\database\\structure\\body_for_table_summary.twig");
+        return new Source("", "database/structure/body_for_table_summary.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\database\\structure\\body_for_table_summary.twig");
     }
 }
