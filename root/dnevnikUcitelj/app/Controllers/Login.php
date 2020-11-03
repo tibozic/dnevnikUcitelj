@@ -37,9 +37,8 @@ class Login extends BaseController
 			}else {
 				$email=$_POST['email'];
 				$this->setUserSession($email);
-
 				//echo 'SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik='.$email;
-				return redirect()->to('/public/home');
+				return redirect()->to('/public/home/home');
 			}
 
 		}
@@ -63,6 +62,13 @@ class Login extends BaseController
 
 		session()->set($data);
 		return true;
+	}
+
+	public function registriran(){
+		$data=[
+			'registracija'=>true,
+		];
+		return view('login',$data);
 	}
 
 }

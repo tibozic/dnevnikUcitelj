@@ -2,7 +2,7 @@
 <html> 
 <head>
 <link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
+<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style.css">
 
 </head>
 <body>
@@ -18,12 +18,17 @@
 					<input id="geslo" name="geslo" type="password">
 					<br><br>
 					<button type="submit" class="btn btn-primary">Prijava</button>
-			</form><br><br>
+			</form><br>
 		<?php if (isset($validation)): ?>
 			<div class="register_error" role="alert">
 				<?php echo $validation->listErrors() ?>
 			</div>
 		<?php endif; ?>
+		<?php if(isset($registracija)){
+			echo '<div class="alert alert-success">';
+  			echo "<strong>Registracija uspešna!</strong>";
+			echo "</div>";
+		}?>
 		<a id="prijava_link" href="/public/register">Registracija</a>
 		</div><br><br>
 	</div>

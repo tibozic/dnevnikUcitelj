@@ -3,7 +3,12 @@
 class Home extends BaseController
 {
 	public function index(){
-		$data=[
+		return redirect()->to("/public/login");
+	}
+
+
+	public function home(){
+    	$data=[
 			"title"=>"Domov",
 		];
 		echo view('header.php',$data);

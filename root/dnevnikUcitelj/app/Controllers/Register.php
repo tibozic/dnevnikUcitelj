@@ -67,7 +67,7 @@ class Register extends BaseController
 				
 				$model=new UciteljModel();
 				$model->save($data);
-				return redirect()->to('/public/login');
+				return redirect()->to('/public/login/registriran');
 			}
 		}
 
