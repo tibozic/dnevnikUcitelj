@@ -5,7 +5,6 @@
 <link type="text/css" rel="stylesheet" href="/public/assets/CSS/style.css">
 <meta charset="UTF-8">
 <title><?= $title ?></title>
-<?php $db = \Config\Database::connect(); ?>
 </head>
 
 <body>
@@ -15,7 +14,7 @@
 <div class="container">
   <ul class="navbar-nav">
     <li class="nav-item"> <a class="nav-link vsebina" href="/public/home/home">Domov </a> </li>
-    <li class="nav-item"><a class="nav-link vsebina" href="/public/test">Test </a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/vnos">Vnos </a></li>
     <li class="nav-item"><a class="nav-link vsebina" href="#">Test 2</a></li>
   </ul>
 </div>

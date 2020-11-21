@@ -1,0 +1,14 @@
+INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik:idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) 
+VALUES(".$_POST['datum'].",".$_POST['naslov'].",".$_POST['vsebina'].",2,".$_POST['dijak']."(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak=".$_POST['dijak']."));
+
+INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik:idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) 
+VALUES(2019-11-19,test,to je test,2,2,(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak=2));
+
+
+'INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik_idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) 
+VALUES ('$_POST["datum"],"test","test",2,2,(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak=1));'
+
+
+
+
+
