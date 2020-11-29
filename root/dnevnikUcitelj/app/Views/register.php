@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style.css">
+<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Registracija</title>
 

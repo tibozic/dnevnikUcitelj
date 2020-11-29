@@ -4,18 +4,18 @@ use \Config\Database;
 class Vnos extends BaseController
 {
 	public function index(){
-		session_start();
+		//$session=session();
+		$db = \Config\Database::connect();
 
-    	$data["title"]="Domov";
+    	$data["title"]="Vnos";
 		$results=$this->izpisiDijake();
 		$data["results"]=$results;
 		if($this->request->getMethod() == 'post'){
-				vnosZapiska();
+			vnosZapiska();
 		}
 		echo view('header.php',$data);
 		echo view('vnos.php');
 		echo view('footer.php');
-		print_r($_SESSION);
 	}
 
 	private function izpisiDijake(){
@@ -27,13 +27,14 @@ class Vnos extends BaseController
 	}
 
 	public function vnosZapiska(){
-		//session_start();
+		$session=session();
+		$db = \Config\Database::connect();
 
-		$builder='INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik_idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) VALUES ('.$_POST["datum"].',"'.$_POST["naslov"].'","'.$_POST["vsebina"].'",2,'.$_POST["dijak"].',(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak='.$_POST["dijak"].'));';
+		$builder='INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik_idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) VALUES (CURDATE(),"'.$_POST["naslov"].'","'.$_POST["vsebina"].'",'.$_SESSION["idUporabnik"].','.$_POST["dijak"].',(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak='.$_POST["dijak"].'));';
 
-		//$builder="INSERT INTO zapisek(datumZapisek, naslovZapisek, vsebinaZapisek, Uporabnik:idUporabnik, Dijak_idDijak, Dijak_Razred_idRazred) VALUES (".$_POST['datum'].",".$_POST['naslov'].",".$_POST['vsebina'].",".$_SESSION['idUporabnik'].",".$_POST['dijak']."(SELECT Razred_idRazred FROM dijak WHERE dijak.idDijak=".$_POST['idDijak']."));';
+		$query=$db->query($builder);
 
-		return;
+		return redirect()->to('/public/vnos');
 	}
 
 	//--------------------------------------------------------------------

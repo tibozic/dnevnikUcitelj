@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 use \Config\Database;
-use App\Cotrollers;
+//use App\Cotrollers;
 
 class Login extends BaseController
 {

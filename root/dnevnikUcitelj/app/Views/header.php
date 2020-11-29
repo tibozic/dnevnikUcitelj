@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style.css">
+<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
 <meta charset="UTF-8">
 <title><?= $title ?></title>
 </head>
@@ -15,7 +15,8 @@
   <ul class="navbar-nav">
     <li class="nav-item"> <a class="nav-link vsebina" href="/public/home/home">Domov </a> </li>
     <li class="nav-item"><a class="nav-link vsebina" href="/public/vnos">Vnos </a></li>
-    <li class="nav-item"><a class="nav-link vsebina" href="#">Test 2</a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/izpisZapiskov">Izpis</a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/administracija">Administracija</a></li>
   </ul>
 </div>
 </nav><br>
