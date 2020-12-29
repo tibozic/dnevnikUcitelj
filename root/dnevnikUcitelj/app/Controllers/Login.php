@@ -38,7 +38,7 @@ class Login extends BaseController
 				$email=$_POST['email'];
 				$this->setUserSession($email);
 				//echo 'SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik='.$email;
-				return redirect()->to('/public/home/home');
+				return redirect()->to('/public/home');
 			}
 
 		}

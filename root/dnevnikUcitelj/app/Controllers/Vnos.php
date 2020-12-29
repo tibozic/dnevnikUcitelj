@@ -19,6 +19,7 @@ class Vnos extends BaseController
 	}
 
 	private function izpisiDijake(){
+		
 		$db = \Config\Database::connect();
 		$builder="SELECT idDijak,imeDijak,priimekDijak,nazivRazred FROM dijak LEFT JOIN razred ON idRazred=Razred_idRazred ORDER BY Razred_idRazred";
 		$query = $db->query($builder);

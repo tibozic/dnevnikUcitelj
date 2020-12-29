@@ -1,7 +1,60 @@
-TODO:
 
-[] Menu:
-	[] Login
-	[] Register
-	[] Home
-	[] Dnevnik
+
+
+pri urejanju uporabnikov
+	- nov select stavek ali shranjenje v session?
+	- administrator ustvari uporabnika?
+
+
+
+
+raztezek spletne strani čez cel ekran?
+
+
+
+
+
+Urejnaje pravic:
+	- uporabnik brez vloge nima dostopa do nicesar
+	- uporabni,ki ni napisal dnevnika ga ne sme urejati/videti razen razrednikov
+	- uporabnik, ki ni administartor ne sme dostopati do adminstratorskih strani
+	- če uporabnik ni prijavljen ga ne spusti v stran
+	- pravice aplikacije v podatkovni bazi
+
+
+Filtri za zapisek
+
+
+
+ocena 1-5
+
+
+
+
+razrednik vidi svoje dijake
+graf glede na koliko zvezdic
+
+google charts
+st *, cas pridobitve ocen
+
+
+
+
+dropdown dijakov razredov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

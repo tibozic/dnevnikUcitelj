@@ -1,4 +1,4 @@
-[Sun Nov 29 10:37:36.783334 2020] [mpm_winnt:notice] [pid 1088:tid 660] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
-[Sun Nov 29 10:37:36.783334 2020] [mpm_winnt:notice] [pid 1088:tid 660] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
-[Sun Nov 29 10:37:36.783334 2020] [core:notice] [pid 1088:tid 660] AH00094: Command line: 'C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna/apache2/bin/httpd_usbwv8.exe -d C:/Users/Jacob/Desktop/zakljucnaVse/zakljucna/apache2'
-[Sun Nov 29 10:37:36.786429 2020] [mpm_winnt:notice] [pid 1088:tid 660] AH00418: Parent: Created child process 2672
+[Tue Dec 29 10:59:37.789118 2020] [mpm_winnt:notice] [pid 4048:tid 628] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
+[Tue Dec 29 10:59:37.789118 2020] [mpm_winnt:notice] [pid 4048:tid 628] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
+[Tue Dec 29 10:59:37.789118 2020] [core:notice] [pid 4048:tid 628] AH00094: Command line: 'C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna/apache2/bin/httpd_usbwv8.exe -d C:/Users/Jacob/Desktop/zakljucnaVse/zakljucna/apache2'
+[Tue Dec 29 10:59:37.793160 2020] [mpm_winnt:notice] [pid 4048:tid 628] AH00418: Parent: Created child process 5756

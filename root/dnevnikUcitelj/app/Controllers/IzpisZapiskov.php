@@ -3,11 +3,14 @@
 class IzpisZapiskov extends BaseController
 {
 	public function index(){
+		$session=session();
+		$db = \Config\Database::connect();
+
+
 
 		$data["title"]="Izpis";
 
 
-		$db = \Config\Database::connect();
 		$builder="SELECT idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred FROM zapisek
 			LEFT JOIN uporabnik ON Uporabnik_idUporabnik=idUporabnik
 			LEFT JOIN dijak ON Dijak_idDijak=idDijak

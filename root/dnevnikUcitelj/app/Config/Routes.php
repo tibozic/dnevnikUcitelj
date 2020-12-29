@@ -31,7 +31,34 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 //$routes->get('/login.php', 'Home::index');
+//
+//
+// (?i) -> case insensitive
+
+
 $route['default_controller'] = 'Login/index';
+
+
+
+
+$routes->get('(?i)odjava', 'UrejanjeUporabnika::odjava');
+
+
+
+
+$routes->get('(?i)Home', 'Home::index', ['filter' => 'auth']);
+$routes->get('(?i)Vnos', 'Vnos::index', ['filter' => 'auth']);
+$routes->get('(?i)izpisZapiskov', 'IzpisZapiskov::index', ['filter' => 'auth']);
+$routes->get('(?i)administracija', 'Administracija::index', ['filter' => 'authadmin']);
+
+
+$routes->get('(?i)login', 'Login::index', ['filter' => 'noauth']);
+
+
+
+
+
+
 
 /**
  * --------------------------------------------------------------------

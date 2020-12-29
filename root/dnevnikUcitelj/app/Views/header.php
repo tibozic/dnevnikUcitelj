@@ -13,10 +13,12 @@
 <nav class="navbar navbar-expand-lg menu">
 <div class="container">
   <ul class="navbar-nav">
-    <li class="nav-item"> <a class="nav-link vsebina" href="/public/home/home">Domov </a> </li>
+    <li class="nav-item"> <a class="nav-link vsebina" href="/public/home">Domov </a> </li>
     <li class="nav-item"><a class="nav-link vsebina" href="/public/vnos">Vnos </a></li>
-    <li class="nav-item"><a class="nav-link vsebina" href="/public/izpisZapiskov">Izpis</a></li>
-    <li class="nav-item"><a class="nav-link vsebina" href="/public/administracija">Administracija</a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/izpisZapiskov">Zapiski </a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/administracija">Administracija </a></li>
+    <li class="nav-item"><a class="nav-link vsebina" href="/public/UrejanjeUporabnika/odjava">Odjava </a></li>
+
   </ul>
 </div>
 </nav><br>

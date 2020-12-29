@@ -4,12 +4,6 @@
     		<label for="naslov">Naslov:</label>
     		<input type="text" class="form-control" id="naslov" name="naslov">
       </div>
-      <!--
-      <div class="form-group">
-        <label for="datum">Datum:</label>
-        <input type="date" class="form-control" id="datum" name="datum" value="<?php echo date('Y-m-d');?>">
-  		</div>
-      -->
   		<div class="form-group">
     		<label for="dijak">Dijak:</label>
     		<select name="dijak" id="dijak" class="form-control">

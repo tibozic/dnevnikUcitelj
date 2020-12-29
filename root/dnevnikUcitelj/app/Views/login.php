@@ -1,8 +1,13 @@
 <!DOCTYPE hmtl>
 <html> 
 <head>
+
+
+
 <link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
+
+<title>Prijava</title>
 
 </head>
 <body>
