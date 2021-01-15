@@ -4,6 +4,15 @@ use \Config\Database;
 class Vnos extends BaseController
 {
 	public function index(){
+
+		/*
+
+			Ustvarjanje novega zapiska
+
+		*/
+
+
+
 		//$session=session();
 		$db = \Config\Database::connect();
 
@@ -20,6 +29,12 @@ class Vnos extends BaseController
 
 	private function izpisiDijake(){
 		
+		/*
+
+			Izpis dijakov za izbirio v dropdown menu
+
+		*/
+
 		$db = \Config\Database::connect();
 		$builder="SELECT idDijak,imeDijak,priimekDijak,nazivRazred FROM dijak LEFT JOIN razred ON idRazred=Razred_idRazred ORDER BY Razred_idRazred";
 		$query = $db->query($builder);
@@ -28,6 +43,14 @@ class Vnos extends BaseController
 	}
 
 	public function vnosZapiska(){
+
+		/*
+
+			Shrani zapisek v podatkovno bazo
+
+		*/
+
+
 		$session=session();
 		$db = \Config\Database::connect();
 
@@ -35,6 +58,12 @@ class Vnos extends BaseController
 
 		$query=$db->query($builder);
 
+		return redirect()->to('/public/vnos');
+	}
+
+	private function zakljuci(){
+
+		
 		return redirect()->to('/public/vnos');
 	}
 

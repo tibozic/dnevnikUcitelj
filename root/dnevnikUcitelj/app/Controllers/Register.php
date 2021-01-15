@@ -16,6 +16,9 @@ class Register extends BaseController
 
 		if($this->request->getMethod() == 'post'){
 
+
+
+			// pravila za registracijo uporabnika
 			$pravila=[
 				'ime'=>'required|min_length[3]|max_length[25]',
 				'priimek'=>'required|min_length[3]|max_length[25]',
@@ -24,6 +27,8 @@ class Register extends BaseController
 				'potrdi_geslo'=>'matches[geslo]',
 			];
 
+
+			// opozorila za registracijo uporabnika
 			$opozorila=[
 				'ime'=>[
 					'required'=>'Izpolnite polje Ime.',
@@ -50,12 +55,22 @@ class Register extends BaseController
 				]
 			];
 
+
+
+
+
 			if(! $this->validate($pravila, $opozorila)){
 				$data['validation']=$this->validator;
 			}else{
 
 				$pass=$this->request->getPost('geslo');
+
+
+				// zakriptira geslo z php funkcijo in algoritmom CRYPT_BLOWFISH
 				$hashed_pass=password_hash($pass, PASSWORD_BCRYPT);
+				if($hashed_pass == false){  // pregleda če je kriptiranje gesla uspešno
+					redirect()->to('/public/register');
+				}
 
 				$data=array(
 					'imeUporabnik' => $this->request->getPost('ime'),
@@ -65,8 +80,8 @@ class Register extends BaseController
 					'Vloga_idVloga' => 5,
 				);
 				
-				$model=new UciteljModel();
-				$model->save($data);
+				$model=new UciteljModel(); // shrani podatke uporabnika v model
+				$model->save($data); // model objavi v podatkovno bazo
 				return redirect()->to('/public/login/registriran');
 			}
 		}

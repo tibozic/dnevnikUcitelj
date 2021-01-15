@@ -12,15 +12,30 @@ class Login extends BaseController
 	//--------------------------------------------------------------------
 
 	public function login(){
+
+		/*
+
+			Prijava uporabnika
+
+		*/
+
+
 		helper(['form']);
 
 		if($this->request->getMethod() == 'post'){
 
+
+
+			// pravila za prijavo uporabnika
 			$pravila=[
 				'email'=>'required|valid_email',
-				'geslo'=>'required|min_length[8]|max_length[50]|validate_user[email,geslo]'
+				'geslo'=>'required|validate_user[email,geslo]',
+				// validate_user -> (App/Validation/UserRules)
 			];
 
+
+
+			// opozorila za prijavo uporabnika
 			$opozorila=[
 				'email'=>[
 					'required'=>'Izpolnite polje Email.',
@@ -32,12 +47,12 @@ class Login extends BaseController
 				]
 			];
 
-			if (! $this->validate($pravila,$opozorila)) {
-				$data['validation']=$this->validator;
+			if (! $this->validate($pravila,$opozorila)) { // primerja uporabnikove vnose z pravilo
+				$data['validation']=$this->validator; // če pravila ne veljajo, vrne napako
 			}else {
 				$email=$_POST['email'];
-				$this->setUserSession($email);
-				//echo 'SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik='.$email;
+				$this->uporabnikPrijava($email); // kliče funkcijo, ki začne uporabnikovo sejo
+
 				return redirect()->to('/public/home');
 			}
 
@@ -45,7 +60,15 @@ class Login extends BaseController
 		return view('login',$data);
 	}
 
-	private function setUserSession($email){
+	private function uporabnikPrijava($email){
+
+		/*
+		
+			Iz baze podatkov najde uporabnika in začne njegovo sejo
+
+		*/
+
+
 		$db = \Config\Database::connect();
 		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik LIKE '$email'";
 		$query = $db->query($builder);
@@ -65,6 +88,9 @@ class Login extends BaseController
 	}
 
 	public function registriran(){
+
+		// če je bil uporabnik ravnokar registriran, vrne sporočilo "uspešno"
+
 		$data=[
 			'registracija'=>true,
 		];
@@ -73,15 +99,3 @@ class Login extends BaseController
 
 }
 
-
-
-/*
-array(1) { 
-[0]=> object(stdClass)#71 (5) {
- ["idUporabnik"]=> string(1) "2" 
- ["imeUporabnik"]=> string(4) "test" 
- ["priimekUporabnik"]=> string(4) "test" 
- ["emailUporabnik"]=> string(14) "test@gmail.com" 
- ["nazivVloga"]=> string(9) "BrezVloge" 
-} } 
-*/

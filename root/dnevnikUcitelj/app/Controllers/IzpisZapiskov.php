@@ -13,8 +13,9 @@ class IzpisZapiskov extends BaseController
 
 		$builder="SELECT idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred FROM zapisek
 			LEFT JOIN uporabnik ON Uporabnik_idUporabnik=idUporabnik
-			LEFT JOIN dijak ON Dijak_idDijak=idDijak
-			LEFT JOIN razred ON Razred_idRazred=idRazred;";
+			LEFT JOIN dijak ON zapisek.Dijak_idDijak=idDijak
+			LEFT JOIN razred ON dijak.Razred_idRazred=idRazred
+			WHERE Uporabnik_idUporabnik='".$_SESSION['idUporabnik']."' OR razred.idRazrednik='".$_SESSION['idUporabnik']."';";
 		$query = $db->query($builder);
 		$results=$query->getResult();
 		$data["zapiski"]=$results;
@@ -27,5 +28,11 @@ class IzpisZapiskov extends BaseController
 
 
 	//--------------------------------------------------------------------
+/*	
+LEFT JOIN razredobiskujepredmet ON Rrazredoniskujepredmet.Razred_idRazred=idRazred
+			LEFT JOIN predmet ON razredoniskujepredmet.Predmet_idPredmet=idPredmet
+			LEFT JOIN uciteljucipredmet ON uciteljucipredmet.Predmet_idPredmet=razredoniskujepredmet.Predmet_idPredmet
+*/
+
 
 }

@@ -1,35 +1,91 @@
 
 
 
-pri urejanju uporabnikov
-	- nov select stavek ali shranjenje v session?
-	- administrator ustvari uporabnika?
-
-
-
-
-raztezek spletne strani čez cel ekran?
-
-
-
-
 
 Urejnaje pravic:
-	- uporabnik brez vloge nima dostopa do nicesar
-	- uporabni,ki ni napisal dnevnika ga ne sme urejati/videti razen razrednikov
-	- uporabnik, ki ni administartor ne sme dostopati do adminstratorskih strani
-	- če uporabnik ni prijavljen ga ne spusti v stran
-	- pravice aplikacije v podatkovni bazi
+	[x] -> uporabnik brez vloge nima dostopa do nicesar
+
+	[x] -> uporabni,ki ni napisal dnevnika ga ne sme videti razen razrednikov
+		[ ] -> urejanje zapiskov (-1-)
+
+	[x] -> uporabnik, ki ni administartor ne sme dostopati do adminstratorskih strani
+
+	[x] -> če uporabnik ni prijavljen ga ne spusti v stran
+		[ ] -> ??? neuporabnik še vedno vidi prvo stran (http://localhost/public/)
+		[ ] -> error msges and functions when not logged in (http://localhost/public/vnos/vnosZapiska)
+
+	[ ] -> pravice aplikacije v podatkovni bazi
+
+	[x] -> prikaz menu glede na vlogo
+
+
+
+Zapisek:
+	[ ] -> rating system kot ocena (najverjetnje js) (-2-)
+
+
+Prikaz grafa: 
+	[ ] -> hover za prikaz naslova zapiska
+		[ ] -> gumb za preusmeritev na zapisek
+
+
+
+Varnost: 
+	[ ] -> ??? SQL injection
+		[ ] -> Escaping queries (https://codeigniter.com/user_guide/database/queries.html)
+				$db->escape($variable)
+
+
+
+
+
+
+
+
+(-1-)
+Zavihki zapiskov glede na to ali si avtor ali razrednik,
+urejanje zapiskov za avtorje, ??? komentarji razrednikov,
+zaključitev zapiska
+
+
+
+(-Session-)
+$data=[
+	'idUporabnik'=>$results[0]->idUporabnik,
+	'imeUporabnik'=>$results[0]->imeUporabnik,
+	'priimekUporabnik'=>$results[0]->priimekUporabnik,
+	'emailUporabnik'=>$results[0]->emailUporabnik,
+	'vlogaUporabnik'=>$results[0]->nazivVloga,
+	'jePrijavljen'=>true,
+];
+
+
+
+
+
+
+
 
 
 Filtri za zapisek
 
 
 
+
+
+
+(-2-)
 ocena 1-5
+st *, cas pridobitve ocen
 
 
 
+
+
+
+
+
+??? typescript
 
 razrednik vidi svoje dijake
 graf glede na koliko zvezdic

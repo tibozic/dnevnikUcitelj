@@ -36,24 +36,42 @@ $routes->setAutoRoute(true);
 // (?i) -> case insensitive
 
 
-$route['default_controller'] = 'Login/index';
+//$route['default_controller'] = 'Login/index';
 
 
 
 
+
+
+// odjava uporabnika
 $routes->get('(?i)odjava', 'UrejanjeUporabnika::odjava');
 
 
 
-
+// preusmeritev uporabnika, ki ni prijavljen
 $routes->get('(?i)Home', 'Home::index', ['filter' => 'auth']);
+
 $routes->get('(?i)Vnos', 'Vnos::index', ['filter' => 'auth']);
+$routes->get('(?i)Vnos', '(?i)Vnos::vnosZapiska', ['filter' => 'auth']);
+
+
+
+
 $routes->get('(?i)izpisZapiskov', 'IzpisZapiskov::index', ['filter' => 'auth']);
+
+$routes->get('(?i)izpisDijakov', 'izpisDijakov::index', ['filter' => 'auth']);
+
+$routes->get('(?i)privateizpisGrafOcen', 'izpisGrafOcen::index', ['filter' => 'auth']);
+
+
+// preusmeritev uporabnika, ki ni admin
 $routes->get('(?i)administracija', 'Administracija::index', ['filter' => 'authadmin']);
 
 
-$routes->get('(?i)login', 'Login::index', ['filter' => 'noauth']);
 
+// preusmeritev uporabnika, ki je prijavljen
+$routes->get('(?i)login', 'Login::index', ['filter' => 'noauth']);
+$routes->get('(?i)login/registriran', 'Login::registriran', ['filter' => 'noauth']);
 
 
 

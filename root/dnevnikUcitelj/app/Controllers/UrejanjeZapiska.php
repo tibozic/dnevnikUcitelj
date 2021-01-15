@@ -3,6 +3,12 @@
 class UrejanjeZapiska extends BaseController
 {
 	public function index($idZapiska){
+
+		/*
+
+			Omogoča urejanje zapiska
+
+		*/
 		
 
 		$data['title']='Urejanje zapiska';

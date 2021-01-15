@@ -3,6 +3,14 @@
 class Administracija extends BaseController
 {
 	public function index(){
+
+		/*
+
+			Prikaz in urejanje vseh uporabnikov
+
+		*/
+
+
 		$session=session();
 		$db = \Config\Database::connect();
 

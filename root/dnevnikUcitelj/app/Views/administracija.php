@@ -7,7 +7,7 @@
 				<th>Priimek</th>
 				<th>Email</th>
 				<th>Vloga</th>
-				<th>Uredi</th>
+				<th></th>
 			</tr>
 			<?php
 
