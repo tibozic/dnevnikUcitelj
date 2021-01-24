@@ -2,7 +2,7 @@
 	<form action="/public/vnos/vnosZapiska" method="post">
   		<div class="form-group">
     		<label for="naslov">Naslov:</label>
-    		<input type="text" class="form-control" id="naslov" name="naslov">
+    		<input type="text" class="form-control" id="naslov" name="naslov" value="<?php echo $podatki[0]->naslovZapisek ?>">
       </div>
   		<div class="form-group">
     		<label for="dijak">Dijak:</label>
@@ -10,28 +10,36 @@
     			<?php
     				foreach($results as $row){
     					echo $row->idDijak;
-    					echo "<option value=".$row->idDijak.">".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
+              if($row->idDijak == $podatki[0]->Dijak_idDijak){
+                echo "<option value=".$row->idDijak." selected>".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
+              }else{
+    					 echo "<option value=".$row->idDijak.">".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
+              }
     				}
     			?>
     		</select>
   		</div>
       <div class="form-group">
-        <input type="radio" id="1" name="ocena" value="1">
-        <label for="1"> 1 </label>
-        <input type="radio" id="2" name="ocena" value="2">
-        <label for="2"> 2 </label>
-        <input type="radio" id="3" name="ocena" value="3">
-        <label for="3"> 3 </label>
-        <input type="radio" id="4" name="ocena" value="4">
-        <label for="4"> 4 </label>
-        <input type="radio" id="5" name="ocena" value="5">
-        <label for="5"> 5 </label>
+        <?php
+
+          for($i=1; $i<6; $i++){
+            if($podatki[0]->ocenaZapisek == $i){
+              echo '<input type="radio" id="'.$i.'" name="ocena" value="'.$i.'" checked>
+                <label for="'.$i.'"> '.$i.' &nbsp;&nbsp;&nbsp;</label>';
+            }else {
+              echo '<input type="radio" id="'.$i.'" name="ocena" value="'.$i.'">
+                <label for="'.$i.'"> '.$i.' &nbsp;&nbsp;&nbsp;</label>';
+            }
+          }
+
+        ?>
       </div>
   		<div class="form-group">
     		<label for="vsebina">Vsebina:</label>
-    		<textarea name="vsebina" id="vsebina" class="form-control"></textarea>
+    		<textarea name="vsebina" id="vsebina" class="form-control"><?php echo $podatki[0]->vsebinaZapisek ?></textarea>
   		</div>
   		<button type="submit" class="btn btn-primary">Shrani</button>
       <button type="submit" class="btn btn-success">Zakjuči</button>
+      
 </form>	
 </div>

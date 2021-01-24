@@ -44,7 +44,7 @@ $routes->setAutoRoute(true);
 
 
 // odjava uporabnika
-$routes->get('(?i)odjava', 'UrejanjeUporabnika::odjava');
+$routes->get('(?i)odjava', 'domov::odjava');
 
 
 
@@ -61,11 +61,15 @@ $routes->get('(?i)izpisZapiskov', 'IzpisZapiskov::index', ['filter' => 'auth']);
 
 $routes->get('(?i)izpisDijakov', 'izpisDijakov::index', ['filter' => 'auth']);
 
-$routes->get('(?i)privateizpisGrafOcen', 'izpisGrafOcen::index', ['filter' => 'auth']);
+$routes->get('(?i)izpisGrafOcen', 'izpisGrafOcen::index', ['filter' => 'auth']);
+
+$routes->get('(?)test', 'test::index', ['filter' => 'auth']);
 
 
 // preusmeritev uporabnika, ki ni admin
 $routes->get('(?i)administracija', 'Administracija::index', ['filter' => 'authadmin']);
+
+$routes->get('(?i)urejanjeUporabnika', 'urejanjeUporabnika::index', ['filter' => 'authadmin']);
 
 
 

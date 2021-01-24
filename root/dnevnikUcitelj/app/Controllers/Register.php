@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-use App\Models\UciteljModel;
+use App\Models\UporabnikModel;
 
 class Register extends BaseController
 {
@@ -15,7 +15,6 @@ class Register extends BaseController
 		helper(['form']);
 
 		if($this->request->getMethod() == 'post'){
-
 
 
 			// pravila za registracijo uporabnika
@@ -55,8 +54,12 @@ class Register extends BaseController
 				]
 			];
 
+			/*
+			
+			*** TODO : validate using seperate file validation /app/donfig/Validation
 
 
+			*/
 
 
 			if(! $this->validate($pravila, $opozorila)){
@@ -79,9 +82,16 @@ class Register extends BaseController
 					'gesloUporabnik' => $hashed_pass,
 					'Vloga_idVloga' => 5,
 				);
+
+				/*
+					
+				INSERT INTO uporabnik(idUporabnik, imeUporabnik, priimekUporabnik, emailUporabnik, gesloUporabnik, Vloga_idVloga);
+
+
+				*/
 				
-				$model=new UciteljModel(); // shrani podatke uporabnika v model
-				$model->save($data); // model objavi v podatkovno bazo
+				$uporabnik = new UporabnikModel(); // shrani podatke uporabnika v model
+				$uporabnik->save($data); // model objavi v podatkovno bazo
 				return redirect()->to('/public/login/registriran');
 			}
 		}

@@ -10,6 +10,7 @@ class IzpisZapiskov extends BaseController
 
 		$data["title"]="Izpis";
 
+		/*
 
 		$builder="SELECT idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred FROM zapisek
 			LEFT JOIN uporabnik ON Uporabnik_idUporabnik=idUporabnik
@@ -19,6 +20,21 @@ class IzpisZapiskov extends BaseController
 		$query = $db->query($builder);
 		$results=$query->getResult();
 		$data["zapiski"]=$results;
+
+		*/
+
+		$builder = $db->table('zapisek');
+		$builder->select('idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred');
+		$builder->join('uporabnik', 'Uporabnik_idUporabnik=idUporabnik', 'left');
+		$builder->join('dijak', 'zapisek.Dijak_idDijak=idDijak', 'left');
+		$builder->join('razred', 'dijak.Razred_idRazred=idRazred', 'left');
+		$builder->where('Uporabnik_idUporabnik', $_SESSION['idUporabnik']);
+		$builder->orwhere('razred.idRazrednik', $_SESSION['idUporabnik']);
+		$builder->orderBy('datumZapisek', 'DESC');
+
+		$query = $builder->get();
+		$results = $query->getResult();
+		$data['zapiski'] = $results;
 
 
 		echo view('header.php',$data);

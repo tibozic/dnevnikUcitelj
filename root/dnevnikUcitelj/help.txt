@@ -22,7 +22,10 @@ Urejnaje pravic:
 
 Zapisek:
 	[ ] -> rating system kot ocena (najverjetnje js) (-2-)
-
+	[ ] -> datumZapiska (kot koncen, ali je potrebno imeti se poseben za zacetekZapiska)
+	[ ] -> trim text
+	[ ] -> ustvarjanje zapiska, le za dijake, ki jih uporabnik uči
+	[ ] -> brisanje zapiska
 
 Prikaz grafa: 
 	[ ] -> hover za prikaz naslova zapiska
@@ -34,9 +37,16 @@ Varnost:
 	[ ] -> ??? SQL injection
 		[ ] -> Escaping queries (https://codeigniter.com/user_guide/database/queries.html)
 				$db->escape($variable)
+	[ ] -> validation z /App/Config/Validation.php
 
 
+Graf Ocen:
+	[ ] -> Sortiranje ocen po datumu, ne pa vrstnem redu vnosa! (-2-)
+	[ ] -> več ocen v enem dnevu(povprečje, točnost na minuto)
 
+
+Podatkovna baza:
+	[ ] -> ??? Vnos z pomočjo modelov?
 
 
 
@@ -46,6 +56,15 @@ Varnost:
 Zavihki zapiskov glede na to ali si avtor ali razrednik,
 urejanje zapiskov za avtorje, ??? komentarji razrednikov,
 zaključitev zapiska
+
+
+(-2-)
+??? sortiranje pred vnosom v graf
+v tabeli imamo 3 ocene:
+id=23, 2021-01-23, 5
+id=24, 2021-01-20, 1
+id=25, 2021-01-24, 2
+// ocena z id 24, je povezana z obema drugima ocenama, namesto samo z najbližjo po datumu
 
 
 

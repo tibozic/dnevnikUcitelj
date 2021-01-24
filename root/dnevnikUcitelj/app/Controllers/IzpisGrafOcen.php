@@ -4,7 +4,7 @@ class IzpisGrafOcen extends BaseController
 {
 	public function index($idDijak){
 		$data["title"] = "Ocene dijaka";
-		$data['ocene'] = IzpisGrafOcen::pridobiOcene($idDijak);
+		$data["ocene"] = IzpisGrafOcen::pridobiOcene($idDijak);
 
 
 
@@ -22,14 +22,27 @@ class IzpisGrafOcen extends BaseController
 		*/
 
 
+
 		$session=session();
 		$db = \Config\Database::connect();
 
+
+		/*
 		$builder = "SELECT ocenaZapisek, datumZapisek, naslovZapisek, idZapisek FROM zapisek WHERE Dijak_idDijak=".$idDijak;
 
 
 		$query = $db->query($builder);
 		$results=$query->getResult();
+
+		*/
+
+
+		$builder = $db->table('zapisek');
+		$builder->select('ocenaZapisek, datumZapisek, naslovZapisek, idZapisek');
+		$builder->where('Dijak_idDijak', $idDijak);
+
+		$query = $builder->get();
+		$results = $query->getResult();
 
 
 

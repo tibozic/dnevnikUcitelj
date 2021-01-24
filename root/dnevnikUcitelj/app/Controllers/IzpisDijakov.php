@@ -37,13 +37,26 @@ class IzpisDijakov extends BaseController
 
 		// need: idDijak, imeDjak, priimekDijak, Razred_idRazred
 
+		
+
+			/*
 		$builder="SELECT idDijak, imeDijak, priimekDijak FROM dijak
 			LEFT JOIN razred ON idRazred=Razred_idRazred
 			WHERE ".$_SESSION['idUporabnik']." LIKE Razred.idRazrednik";
 		$query = $db->query($builder);
 		$results=$query->getResult();
 		return $results;
+			*/
 
+		$builder = $db->table('dijak');
+		$builder->select('idDijak, imeDijak, priimekDijak');
+		$builder->join('razred', 'Razred_idRazred=idRazred', 'left');
+		$builder->where('Razred.idRazrednik', $_SESSION['idUporabnik']);
+
+		$query = $builder->get();
+		$results = $query->getResult();
+
+		return $results;
 
 
 	}

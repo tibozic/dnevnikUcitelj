@@ -1,5 +1,93 @@
 <div class="container">
 
+
+
 	<h1>Graf: </h1>
 
+	<div id="graf"></div>
+
+	<?php
+
+		//print_r($ocene);
+
+    //echo $ocene[0]->datumZapisek;
+    //echo "<br>";
+    //echo 'data.addRows([[new Date('.$ocene[3]->datumZapisek.'),'.$ocene[3]->ocenaZapisek.']]);';
+	?>
+
+
+
 </div>
+
+
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+	<script	type="text/javascript">
+
+
+  
+
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawChart);
+
+
+
+	function drawChart() {
+
+    let data = new google.visualization.DataTable();
+    data.addColumn('date', 'Datum');
+    data.addColumn('number', 'Ocena');
+    
+
+    <?php
+      foreach($ocene as $ocena){
+        if($ocena->ocenaZapisek != 0){ // 0 je default vrednost, kar pomeni, da ocena ni vpisana
+          echo 'data.addRows([[new Date("'.$ocena->datumZapisek.'"),'.$ocena->ocenaZapisek.']]);';
+          //echo 'console.log(new Date("'.$ocena->datumZapisek.'"),'.$ocena->ocenaZapisek.');';
+        }
+      }
+    ?>
+
+    //console.log(new Date('2015-01-02'));
+    /*
+    data.addRows([
+      [new Date(2015, 0, 1), 5],  [new Date(2015, 0, 2), 7],  [new Date(2015, 0, 3), 3],
+      [new Date(2015, 0, 4), 1],  [new Date(2015, 0, 5), 3],  [new Date(2015, 0, 6), 4],
+      [new Date(2015, 0, 7), 3],  [new Date(2015, 0, 8), 4],  [new Date(2015, 0, 9), 2],
+      [new Date(2015, 0, 10), 5], [new Date(2015, 0, 11), 8], [new Date(2015, 0, 12), 6],
+      [new Date(2015, 0, 13), 3], [new Date(2015, 0, 14), 3], [new Date(2015, 0, 15), 5],
+      [new Date(2015, 0, 16), 7], [new Date(2015, 0, 17), 6], [new Date(2015, 0, 18), 6],
+      [new Date(2015, 0, 19), 3], [new Date(2015, 0, 20), 1], [new Date(2015, 0, 21), 2],
+      [new Date(2015, 0, 22), 4], [new Date(2015, 0, 23), 6], [new Date(2015, 0, 24), 5],
+      [new Date(2015, 0, 25), 9], [new Date(2015, 0, 26), 4], [new Date(2015, 0, 27), 9],
+      [new Date(2015, 0, 28), 8], [new Date(2015, 0, 29), 6], [new Date(2015, 0, 30), 4],
+      [new Date(2015, 0, 31), 6], [new Date(2015, 1, 1), 7],  [new Date(2015, 1, 2), 9]
+    ]);
+    */
+
+
+
+
+    let options = {
+      title: 'Napredek dijaka čez čas',
+      width: 900,
+      height: 500,
+      hAxis: {
+        format: 'M/d/yy',
+        gridlines: {count: 15}
+      },
+      vAxis: {
+        gridlines: {color: 'none'},
+        minValue: 0
+      }
+    };
+
+    let chart = new google.visualization.LineChart(document.getElementById('graf'));
+
+    chart.draw(data, options);
+
+
+	}
+	
+
+
+	</script>

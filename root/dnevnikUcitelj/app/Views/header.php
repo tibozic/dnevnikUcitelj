@@ -22,7 +22,7 @@
 			    <li class='nav-item'><a class='nav-link vsebina' href='/public/administracija'>Administracija </a></li>
           <li class='nav-item'><a class='nav-link vsebina' href='/public/izpisDijakov'>Dijaki </a></li>
 			    <li class='nav-item'><a class='nav-link vsebina' href='/public/test'>Test </a></li>
-			    <li class='nav-item' id='logout'><a class='nav-link vsebina' href='/public/UrejanjeUporabnika/odjava'>Odjava </a></li>
+			    <li class='nav-item' id='logout'><a class='nav-link vsebina' href='/public/home/odjava'>Odjava </a></li>
 
   			";
   		}else{
@@ -31,7 +31,7 @@
 				    <li class='nav-item'><a class='nav-link vsebina' href='/public/vnos'>Vnos </a></li>
 				    <li class='nav-item'><a class='nav-link vsebina' href='/public/izpisZapiskov'>Zapiski </a></li>
 				    <li class='nav-item'><a class='nav-link vsebina' href='/public/test'>Test </a></li>
-				    <li class='nav-item' id='logout'><a class='nav-link vsebina' href='/public/UrejanjeUporabnika/odjava'>Odjava </a></li>
+				    <li class='nav-item' id='logout'><a class='nav-link vsebina' href='/public/home/odjava'>Odjava </a></li>
   			";
   		}
 

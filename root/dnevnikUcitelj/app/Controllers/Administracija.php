@@ -18,8 +18,20 @@ class Administracija extends BaseController
 
 		$data["title"]="Administracija";
 
+		
+
+		
+		/*	
+
 		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN Vloga ON Vloga_idVloga=idVloga";
-		$query = $db->query($builder);
+		*/
+
+
+		$builder = $db->table('uporabnik');
+		$builder->select('idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga');
+		$builder->join('Vloga', 'Vloga_idVloga=idVloga', 'left');
+
+		$query = $builder->get();
 		$results=$query->getResult();
 		$data["uporabniki"]=$results;
 

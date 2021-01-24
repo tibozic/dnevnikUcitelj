@@ -10,6 +10,10 @@ class Home extends BaseController
 		echo view('footer.php');
 	}
 
+	public function odjava(){
+		session()->destroy();
+		return redirect()->to('/public/login');
+	}
 
 	//--------------------------------------------------------------------
 

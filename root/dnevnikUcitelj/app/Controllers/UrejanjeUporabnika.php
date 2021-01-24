@@ -50,21 +50,31 @@ class UrejanjeUporabnika extends BaseController
 
 		$db = \Config\Database::connect();
 
-
+		/*
 		$builder="UPDATE uporabnik SET imeUporabnik='".$_POST['ime']."', priimekUporabnik='".$_POST['priimek']."', emailUporabnik='".$_POST['email']."', Vloga_idVloga='".$_POST['vloga']."' WHERE idUporabnik=".$idUporabnik.";";
 
 		//echo $builder;
 		$query = $db->query($builder);
 		$results=$query->getResult();
+		*/
+		
+		$builder = $db->table('uporabnik');
+		$builder->set('imeUporabnik', $_POST['ime']);
+		$builder->set('priimekUporabnik', $_POST['priimek']);
+		$builder->set('emailUporabnik', $_POST['email']);
+		$builder->set('Vloga_idVloga', $_POST['vloga']);
+		$builder->where('idUporabnik', $idUporabnik);
+		$builder->update();
+
+
+
+
 
 		return redirect()->to('/public/administracija');
 	}
 
 
-	public function odjava(){
-		session()->destroy();
-		return redirect()->to('/public/login');
-	}
+	
 
 	//--------------------------------------------------------------------
 
