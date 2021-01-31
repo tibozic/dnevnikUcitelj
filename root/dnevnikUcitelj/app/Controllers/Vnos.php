@@ -3,7 +3,7 @@ use \Config\Database;
 
 class Vnos extends BaseController
 {
-	public function index($idZapiska=null){
+	public function index($idZapiska='null'){
 
 		/*
 
@@ -11,11 +11,11 @@ class Vnos extends BaseController
 
 		*/
 
-		if($idZapiska != null){
+		if($idZapiska != 'null'){
 			$data['podatki'] = Vnos::pridobiPodatke($idZapiska);
 		}else{
 			$data['podatki'] = [(object)[
-				'idZapisek' => null,
+				'idZapisek' => 'null',
 				'naslovZapisek' => '',
 				'ocenaZapisek' => 0,
 				'vsebinaZapisek' => '',
@@ -24,13 +24,14 @@ class Vnos extends BaseController
 		}
 
 		//$session=session();
-		$db = \Config\Database::connect();
 
     	$data["title"]="Vnos";
+
+
 		$results=$this->izpisiDijake();
 		$data["results"]=$results;
 		if($this->request->getMethod() == 'post'){
-			vnosZapiska();
+			vnosZapiska($idZapiska);
 		}
 		echo view('header.php',$data);
 		echo view('vnos.php');
@@ -69,13 +70,15 @@ class Vnos extends BaseController
 		return $results;
 	}
 
-	public function vnosZapiska(){
+	public function vnosZapiska($idZapiska='null'){
 
 		/*
 
 			Shrani zapisek v podatkovno bazo
 
 		*/
+
+		$ocena = $_POST['ocena'] ?? 0;
 
 
 		$session=session();
@@ -100,7 +103,7 @@ class Vnos extends BaseController
 		$zapisekData = [
 			'datumZapisek' => date('Y-m-d'), //vrne datum v formatu yyyy-mm-dd (kot CURDATE())
 			'naslovZapisek' => $_POST['naslov'],
-			'ocenaZapisek' => $_POST['ocena'],
+			'ocenaZapisek' => $ocena,
 			'vsebinaZapisek' => $_POST['vsebina'],
 			'Uporabnik_idUporabnik' => $_SESSION['idUporabnik'],
 			'Dijak_idDijak' => $_POST['dijak'],
@@ -109,19 +112,23 @@ class Vnos extends BaseController
 
 		// podatke sharni v PB
 		$builder = $db->table('zapisek');
-		$builder->insert($zapisekData);
+
+		if ($idZapiska != 'null')
+		{
+			$builder->where('idZapisek', $idZapiska);
+			$builder->update($zapisekData);
+		}
+		else
+		{
+			$builder->insert($zapisekData);
+		}
 
 
 
 
-		return redirect()->to('/public/vnos');
+		return redirect()->to('/public/izpisZapiskov');
 	}
 
-	private function zakljuci(){
-
-		
-		return redirect()->to('/public/vnos');
-	}
 
 	//--------------------------------------------------------------------
 

@@ -43,6 +43,45 @@
 
 
 
+/* Zvezdice ocene */
+
+.zvezdice{
+  width: 200px;
+  display: inline-block;
+}
+
+input.zvezdica { display: none; }
+
+label.zvezdica {
+  float: right;
+  padding: 10px;
+  font-size: 36px;
+  color: #444;
+  transition: all .2s;
+}
+
+input.zvezdica:checked ~ label.zvezdica:before {
+  content: '/public/assets/bootstrap-icons/star.svg';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.zvezdica-5:checked ~ label.zvezdica:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.zvezdica-1:checked ~ label.zvezdica:before { color: #F62; }
+
+label.zvezdica:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.zvezdica:before {
+  content: url('/public/assets/bootstrap-icons/star-fill.svg');
+}
+
+
+
+
 
 /* PRIJAVA / REGISTRACIJA */
 

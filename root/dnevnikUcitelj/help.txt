@@ -21,8 +21,7 @@ Urejnaje pravic:
 
 
 Zapisek:
-	[ ] -> rating system kot ocena (najverjetnje js) (-2-)
-	[ ] -> datumZapiska (kot koncen, ali je potrebno imeti se poseben za zacetekZapiska)
+	[x] -> rating system kot ocena (najverjetnje js) (-2-)
 	[ ] -> trim text
 	[ ] -> ustvarjanje zapiska, le za dijake, ki jih uporabnik uči
 	[ ] -> brisanje zapiska
@@ -41,9 +40,10 @@ Varnost:
 
 
 Graf Ocen:
-	[ ] -> Sortiranje ocen po datumu, ne pa vrstnem redu vnosa! (-2-)
-	[ ] -> več ocen v enem dnevu(povprečje, točnost na minuto)
-
+	[x] -> Sortiranje ocen po datumu, ne pa vrstnem redu vnosa! (-2-)
+	[x] -> več ocen v enem dnevu(povprečje, točnost na minuto)
+	[x] -> order by
+	[x] -> povp. ocena dneva group by date
 
 Podatkovna baza:
 	[ ] -> ??? Vnos z pomočjo modelov?
@@ -123,7 +123,7 @@ dropdown dijakov razredov
 
 
 
-
+7:20
 
 
 

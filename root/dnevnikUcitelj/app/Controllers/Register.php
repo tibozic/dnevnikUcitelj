@@ -56,7 +56,7 @@ class Register extends BaseController
 
 			/*
 			
-			*** TODO : validate using seperate file validation /app/donfig/Validation
+			*** TODO : validate using seperate file validation /app/config/Validation
 
 
 			*/

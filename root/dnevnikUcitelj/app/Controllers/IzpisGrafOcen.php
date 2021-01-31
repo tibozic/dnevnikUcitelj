@@ -38,8 +38,9 @@ class IzpisGrafOcen extends BaseController
 
 
 		$builder = $db->table('zapisek');
-		$builder->select('ocenaZapisek, datumZapisek, naslovZapisek, idZapisek');
+		$builder->select('AVG(ocenaZapisek) AS ocenaZapisek, datumZapisek, naslovZapisek, idZapisek');
 		$builder->where('Dijak_idDijak', $idDijak);
+		$builder->groupBy('datumZapisek');
 
 		$query = $builder->get();
 		$results = $query->getResult();
