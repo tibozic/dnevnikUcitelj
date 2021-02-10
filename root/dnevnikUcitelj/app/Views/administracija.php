@@ -18,7 +18,7 @@
 					<th>".$uporabnik->priimekUporabnik."</th>
 					<th>".$uporabnik->emailUporabnik."</th>
 					<th>".$uporabnik->nazivVloga."</th>
-					<th><a href='/public/urejanjeUporabnika/index/".$uporabnik->idUporabnik."'>Uredi</a></th>
+					<th><a href='".base_url()."/urejanjeUporabnika/index/".$uporabnik->idUporabnik."'>Uredi</a></th>
 				</tr>";
 			}
 

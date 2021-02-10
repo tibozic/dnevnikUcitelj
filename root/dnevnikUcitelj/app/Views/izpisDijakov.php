@@ -16,7 +16,7 @@
 					<tr>
 						<th>".$dijak->imeDijak."</th>
 						<th>".$dijak->priimekDijak."</th>
-						<th><a href='/public/izpisGrafOcen/index/".$dijak->idDijak."'>Preglej</a></th>
+						<th><a href='".base_url()."/izpisGrafOcen/index/".$dijak->idDijak."'>Preglej</a></th>
 					</tr>";
 				}
 			?>

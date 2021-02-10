@@ -1,7 +1,7 @@
 <html>
 <head>
-<link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
+<link rel="stylesheet" href="<?php base_url() ?>/assets/CSS/bootstrap/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="<?php base_url() ?>/assets/CSS/style2.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <title>Registracija</title>
 
@@ -12,7 +12,7 @@
 	<div class="text-center">
 		<div class="form-start">
 			<h1>Registracija</h1>
-			<form action="/public/register/register" method="post">
+			<form action="<?php base_url() ?>/register/register" method="post">
 				<label for="ime">Ime: </label><br>
 				<input id="ime" name="ime" type="text">
 				<br><br>
@@ -35,7 +35,7 @@
 				<?php echo $validation->listErrors() ?>
 			</div>
 		<?php endif; ?>
-		<a id="prijava_link" href="/public/login">Prijava</a>
+		<a id="prijava_link" href="<?php base_url() ?>/login">Prijava</a>
 		</div><br><br>
 	</div>
 </body>

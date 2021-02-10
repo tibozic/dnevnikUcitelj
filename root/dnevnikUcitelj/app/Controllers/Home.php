@@ -12,7 +12,7 @@ class Home extends BaseController
 
 	public function odjava(){
 		session()->destroy();
-		return redirect()->to('/public/login');
+		return redirect()->to(base_url().'/login');
 	}
 
 	//--------------------------------------------------------------------

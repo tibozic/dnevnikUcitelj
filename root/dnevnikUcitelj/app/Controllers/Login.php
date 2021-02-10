@@ -53,7 +53,7 @@ class Login extends BaseController
 				$email=$_POST['email'];
 				$this->uporabnikPrijava($email); // kliče funkcijo, ki začne uporabnikovo sejo
 
-				return redirect()->to('/public/home');
+				return redirect()->to(base_url().'/home');
 			}
 
 		}

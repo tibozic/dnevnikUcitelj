@@ -92,7 +92,7 @@ class Register extends BaseController
 				
 				$uporabnik = new UporabnikModel(); // shrani podatke uporabnika v model
 				$uporabnik->save($data); // model objavi v podatkovno bazo
-				return redirect()->to('/public/login/registriran');
+				return redirect()->to(base_url().'/login/registriran');
 			}
 		}
 

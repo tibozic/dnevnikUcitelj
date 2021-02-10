@@ -126,7 +126,7 @@ class Vnos extends BaseController
 
 
 
-		return redirect()->to('/public/izpisZapiskov');
+		return redirect()->to(base_url().'/izpisZapiskov');
 	}
 
 

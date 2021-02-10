@@ -67,6 +67,16 @@
 	        chart.draw(data, options);
 
 
+			google.visualization.events.addListener(chart, 'select', function(e)
+				{
+					//let selection = ;
+					let baseurl = '<?php echo base_url(); ?>';
+					let link = baseurl + "/home";
+					console.log(link);
+					window.location.replace(link);
+				}
+			);
+
 		}
 		
 		//document.write("This is a test");

@@ -4,8 +4,8 @@
 
 
 
-<link rel="stylesheet" href="/public/assets/CSS/bootstrap/css/bootstrap.css">
-<link type="text/css" rel="stylesheet" href="/public/assets/CSS/style2.css">
+<link rel="stylesheet" href="<?php base_url() ?>/assets/CSS/bootstrap/css/bootstrap.css">
+<link type="text/css" rel="stylesheet" href="<?php base_url() ?>/assets/CSS/style2.css">
 
 <title>Prijava</title>
 
@@ -15,7 +15,7 @@
 	<div class="text-center">
 		<div class="form-start">
 			<h1>Prijava</h1>
-			<form action="/public/login/login" method="post">
+			<form action="<?php base_url() ?>login/login" method="post">
 				<label for="email">E-mail:</label>
 					<input id="email" name="email" type="text">
 					<br><br>
@@ -34,7 +34,7 @@
   			echo "<strong>Registracija uspešna!</strong>";
 			echo "</div>";
 		}?>
-		<a id="prijava_link" href="/public/register">Registracija</a>
+		<a id="prijava_link" href="<?php base_url() ?>/register">Registracija</a>
 		</div><br><br>
 	</div>
 </body>

@@ -1,5 +1,5 @@
 <div class="container">
-	<form action="/public/vnos/vnosZapiska<?php echo '/'.$podatki[0]->idZapisek ?>" method="post">
+	<form action="<?php base_url() ?>/vnos/vnosZapiska<?php echo '/'.$podatki[0]->idZapisek ?>" method="post">
   		<div class="form-group">
     		<label for="naslov">Naslov:</label>
     		<input type="text" class="form-control" id="naslov" name="naslov" value="<?php echo $podatki[0]->naslovZapisek ?>">

@@ -1,7 +1,7 @@
 <div class="container">
 
 
-	<form action="/public/urejanjeUporabnika/shrani/<?php echo $uporabnik[0]->idUporabnik; ?>" method="post">
+	<form action="<?php base_url() ?>/urejanjeUporabnika/shrani/<?php echo $uporabnik[0]->idUporabnik; ?>" method="post">
 		<div class="row">
 			<div class="col">
 				<div class="form-group">

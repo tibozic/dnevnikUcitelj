@@ -34,18 +34,27 @@
 	function drawChart() {
 
     let data = new google.visualization.DataTable();
+    //ustvari tabelo za ocene
+    //data.addColumn('string', 'Naslov');
     data.addColumn('date', 'Datum');
     data.addColumn('number', 'Ocena');
+    data.addColumn('string', 'Naslov');
+    data.addColumn('number', 'idZapisek');
     
 
     <?php
+      // doda vse ocene dijaka v tabelo
       foreach($ocene as $ocena){
         if($ocena->ocenaZapisek != 0){ // 0 je default vrednost, kar pomeni, da ocena ni vpisana
-          echo 'data.addRows([[new Date("'.$ocena->datumZapisek.'"),'.$ocena->ocenaZapisek.']]);';
+          echo 'data.addRows([[new Date("'.$ocena->datumZapisek.'"),'.$ocena->ocenaZapisek.',"'.$ocena->naslovZapisek.'", '.$ocena->idZapisek.']]);';
           //echo 'console.log(new Date("'.$ocena->datumZapisek.'"),'.$ocena->ocenaZapisek.');';
         }
       }
     ?>
+
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0,1]);
+
 
     //console.log(new Date('2015-01-02'));
     /*
@@ -69,21 +78,43 @@
 
     let options = {
       title: 'Napredek dijaka čez čas',
-      width: 900,
+      legend: 'none',
+      width: 1200,
       height: 500,
       hAxis: {
-        format: 'M/d/yy',
+        format: 'MM/dd/yy',
         gridlines: {count: 15}
       },
       vAxis: {
         gridlines: {color: 'none'},
         minValue: 0
-      }
+      },
+      pointSize: 10,
     };
 
     let chart = new google.visualization.LineChart(document.getElementById('graf'));
 
-    chart.draw(data, options);
+    chart.draw(view, options);
+
+    google.visualization.events.addListener(chart, 'select', function(e)
+				{
+          // get selected element
+          let selection = chart.getSelection();
+          // get first row of selected element 
+          let row = selection[0].row;
+          // get id of selected element which is 4th(3) colomun of selected row
+          let idZapisek = data.getValue(row,3);
+          //console.log(selection);
+
+
+          let baseurl = '<?php echo base_url(); ?>';
+					let link = baseurl + "/vnos/index/"+idZapisek;
+          //console.log(link);
+          
+
+					window.location.replace(link);
+				}
+			);
 
 
 	}
