@@ -49,6 +49,10 @@ Graf Ocen:
 Podatkovna baza:
 	[ ] -> ??? Vnos z pomočjo modelov?
 
+Domača stran:
+	[ ] -> ??? obvestila ravnatelja/administratorja
+
+
 povprečna ocena skozi čas (graf) -> ko pridobi oceno se posodbi
 izgledi
 graf
