@@ -1,0 +1,147 @@
+
+
+
+
+Urejnaje pravic:
+	[x] -> uporabnik brez vloge nima dostopa do nicesar
+
+	[x] -> uporabni,ki ni napisal dnevnika ga ne sme videti razen razrednikov
+		[ ] -> urejanje zapiskov (-1-)
+
+	[x] -> uporabnik, ki ni administartor ne sme dostopati do adminstratorskih strani
+
+	[x] -> če uporabnik ni prijavljen ga ne spusti v stran
+		[ ] -> ??? neuporabnik še vedno vidi prvo stran (http://localhost/public/)
+		[ ] -> error msges and functions when not logged in (http://localhost/public/vnos/vnosZapiska)
+
+	[ ] -> pravice aplikacije v podatkovni bazi
+
+	[x] -> prikaz menu glede na vlogo
+
+
+
+Zapisek:
+	[x] -> rating system kot ocena (najverjetnje js) (-2-)
+	[ ] -> trim text
+	[ ] -> ustvarjanje zapiska, le za dijake, ki jih uporabnik uči
+	[ ] -> brisanje zapiska
+	[ ] -> poseben prikaz zapiska ali kar kot urejanje?
+
+Prikaz grafa: 
+	[ ] -> hover za prikaz naslova zapiska
+		[ ] -> gumb za preusmeritev na zapisek
+
+
+
+Varnost: 
+	[ ] -> ??? SQL injection
+		[ ] -> Escaping queries (https://codeigniter.com/user_guide/database/queries.html)
+				$db->escape($variable)
+	[ ] -> validation z /App/Config/Validation.php
+
+
+Graf Ocen:
+	[x] -> Sortiranje ocen po datumu, ne pa vrstnem redu vnosa! (-2-)
+	[x] -> več ocen v enem dnevu(povprečje, točnost na minuto)
+	[x] -> order by
+	[x] -> povp. ocena dneva group by date
+
+Podatkovna baza:
+	[ ] -> ??? Vnos z pomočjo modelov?
+
+Domača stran:
+	[ ] -> ??? obvestila ravnatelja/administratorja
+
+
+povprečna ocena skozi čas (graf) -> ko pridobi oceno se posodbi
+izgledi
+graf
+razrednik gleda ločeno po razredih
+
+
+
+Colors:
+https://coolors.co/05396b-389583-248e66-5cdb94-edf5e0
+https://www.awwwards.com/sites/grosse-lanterne-1
+
+
+
+(-1-)
+Zavihki zapiskov glede na to ali si avtor ali razrednik,
+urejanje zapiskov za avtorje, ??? komentarji razrednikov,
+zaključitev zapiska
+
+
+(-2-)
+??? sortiranje pred vnosom v graf
+v tabeli imamo 3 ocene:
+id=23, 2021-01-23, 5
+id=24, 2021-01-20, 1
+id=25, 2021-01-24, 2
+// ocena z id 24, je povezana z obema drugima ocenama, namesto samo z najbližjo po datumu
+
+
+
+(-Session-)
+$data=[
+	'idUporabnik'=>$results[0]->idUporabnik,
+	'imeUporabnik'=>$results[0]->imeUporabnik,
+	'priimekUporabnik'=>$results[0]->priimekUporabnik,
+	'emailUporabnik'=>$results[0]->emailUporabnik,
+	'vlogaUporabnik'=>$results[0]->nazivVloga,
+	'jePrijavljen'=>true,
+];
+
+
+
+
+
+
+
+Filtri za zapisek
+
+
+
+
+
+
+(-2-)
+ocena 1-5
+st *, cas pridobitve ocen
+
+
+
+
+
+
+
+
+??? typescript
+
+razrednik vidi svoje dijake
+graf glede na koliko zvezdic
+
+google charts
+st *, cas pridobitve ocen
+
+
+
+
+dropdown dijakov razredov
+
+
+
+
+
+
+
+7:20
+
+
+
+
+
+
+
+
+
