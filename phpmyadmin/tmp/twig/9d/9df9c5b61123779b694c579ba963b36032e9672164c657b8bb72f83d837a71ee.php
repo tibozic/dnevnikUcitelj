@@ -94,6 +94,6 @@ class __TwigTemplate_e3a1e1772437326858fe1acae475858c6f011d9c1d30fd592a0f08a1cc8
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\console\\query_action.twig");
+        return new Source("", "console/query_action.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\console\\query_action.twig");
     }
 }

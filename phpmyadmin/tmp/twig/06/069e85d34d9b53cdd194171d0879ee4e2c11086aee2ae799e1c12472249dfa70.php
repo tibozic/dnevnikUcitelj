@@ -61,6 +61,6 @@ class __TwigTemplate_831e17dc250bb182f460963657dfcc7c7e8e2cfc84d309a5780cc18ead8
 
     public function getSourceContext()
     {
-        return new Source("", "login/footer.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\login\\footer.twig");
+        return new Source("", "login/footer.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\login\\footer.twig");
     }
 }

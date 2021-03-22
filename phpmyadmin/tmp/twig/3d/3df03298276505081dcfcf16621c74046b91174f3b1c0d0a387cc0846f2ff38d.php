@@ -76,6 +76,6 @@ class __TwigTemplate_509f55edd8814c6ad505c6b48e2017ab2ae83fe503d34bd8924bdee588f
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/data_for_resetting_column_order.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\data_for_resetting_column_order.twig");
+        return new Source("", "display/results/data_for_resetting_column_order.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\data_for_resetting_column_order.twig");
     }
 }

@@ -258,6 +258,6 @@ $context["record"]) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e6
 
     public function getSourceContext()
     {
-        return new Source("", "console/display.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\console\\display.twig");
+        return new Source("", "console/display.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\console\\display.twig");
     }
 }

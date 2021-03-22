@@ -15,7 +15,7 @@
   <ul class="navbar-nav">
   	<?php
   		if(session()->get('vlogaUporabnik') == 'Administrator' || session()->get('vlogaUporabnik') == 'Ravnatelj'){
-  			echo "
+			echo "
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Vnos </a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov'>Zapiski </a></li>

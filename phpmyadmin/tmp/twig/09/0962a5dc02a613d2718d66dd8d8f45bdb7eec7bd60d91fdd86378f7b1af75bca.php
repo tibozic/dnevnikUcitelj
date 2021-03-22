@@ -126,6 +126,6 @@ class __TwigTemplate_4598cfe92268339b6628f02478cc6186b55bcda51a68556680a4f3e4d30
 
     public function getSourceContext()
     {
-        return new Source("", "select_lang.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\select_lang.twig");
+        return new Source("", "select_lang.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\select_lang.twig");
     }
 }

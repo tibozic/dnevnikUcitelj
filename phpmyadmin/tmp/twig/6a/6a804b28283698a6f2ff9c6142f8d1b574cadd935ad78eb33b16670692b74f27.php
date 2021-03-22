@@ -95,6 +95,6 @@ class __TwigTemplate_d55c32c358d59788e009f242c0ac4a119221ee20c0afbe50d2d3e460c31
 
     public function getSourceContext()
     {
-        return new Source("", "database/create_table.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\database\\create_table.twig");
+        return new Source("", "database/create_table.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\database\\create_table.twig");
     }
 }

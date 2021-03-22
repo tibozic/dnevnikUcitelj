@@ -527,6 +527,6 @@ class __TwigTemplate_6fcc713aa4bfce6374bce86a38e81ff12995c1c08bc578c4a39d656e0d2
 
     public function getSourceContext()
     {
-        return new Source("", "home/index.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\home\\index.twig");
+        return new Source("", "home/index.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\home\\index.twig");
     }
 }

@@ -85,6 +85,6 @@ class __TwigTemplate_66fc382b5d69e82a1d0e4fb2a1e8870c0ce660774676c8be3e15e15ecd2
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/sort_by_key.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\sort_by_key.twig");
+        return new Source("", "display/results/sort_by_key.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\sort_by_key.twig");
     }
 }

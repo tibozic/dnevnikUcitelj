@@ -71,6 +71,6 @@ class __TwigTemplate_dd1b653d1f154b20fb7ed80d94a5475c9dbe223534f2dcf54dc1e5f9e0d
 
     public function getSourceContext()
     {
-        return new Source("", "filter.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\filter.twig");
+        return new Source("", "filter.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\filter.twig");
     }
 }

@@ -86,6 +86,6 @@ class __TwigTemplate_5495b145cf7064720bbdb151eb339492e6e82b23dd7d6363023392c8eac
 
     public function getSourceContext()
     {
-        return new Source("", "sql/sql_query_results.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\sql\\sql_query_results.twig");
+        return new Source("", "sql/sql_query_results.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\sql\\sql_query_results.twig");
     }
 }

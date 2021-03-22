@@ -169,6 +169,6 @@ class __TwigTemplate_885ea9fac25be2ae478e1d25ff45dfb2b0f1bec121e366c3538bcaa6143
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/options_block.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\options_block.twig");
+        return new Source("", "display/results/options_block.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\options_block.twig");
     }
 }
