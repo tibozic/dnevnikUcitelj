@@ -73,6 +73,6 @@ class __TwigTemplate_2c1996d290fbef21bc3fddc45e8118f36d490b95383a859c1b1023020f9
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_null.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_null.twig");
+        return new Source("", "columns_definitions/column_null.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_null.twig");
     }
 }

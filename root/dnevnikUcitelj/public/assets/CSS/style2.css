@@ -5,20 +5,54 @@ body
 
 
 
-
-
-
+.container2
+{
+	float: left;
+	width: 75%;
+	margin-left: 20%;
+	min-width: 750px;
+}
 
 
 /* MENU */
 
 .menu_celoten{
-	background-color: #28b867;
+	position: fixed;
+	background-color:#535355;
+	width: 15%;
+	height: 100%;
+	float:left;
+	min-width: 150px;
+	font-size: 130%;
+}
+.menu_celoten ul
+{
+	display: block;
+	margin-top: 95px;
 }
 
 .menu_vsebina_text{
 	color: white;
 	height: 100%;
+	display: block;
+	margin: 10px;
+}
+.menu_vsebina_text:hover
+{
+	background-color: #0094da;
+	padding-left: 10px;
+	color: white;
+}
+.naslovnica
+{
+	margin-top: -25px;
+	margin-bottom: 40px;
+	width: 100%;
+	background-color: #a6ce39;
+	color: white;
+	padding: 20px;
+	float: left;
+	padding-left: 20%;
 }
 
 
@@ -33,9 +67,9 @@ body
 */
 
 
-#logout{
-	float:right !important;
-}
+
+
+
 
 
 /* VNOS VSEBINE V FORMI */
@@ -91,8 +125,29 @@ label.zvezdica:before {
   content: url('/assets/bootstrap-icons/star.svg');
 }
 
-
-
+/* IZGLED ZAPISKA */
+.izpisek
+{
+	border-color: #28b867;
+	border-style: solid;
+	border-radius: 10px 10px 10px 10px;
+	padding: 20px;
+	margin-right: 5%;
+	margin-top: 10px;
+	float: left;
+	width: 40%;
+	height: 300px;
+	min-width: 400px;
+}
+.zapisek_vsebina
+{
+	overflow: hidden;
+	height: 80px;
+}
+.ocena_zvezdica
+{
+	transform: scale(1.5);
+}
 
 
 /* PRIJAVA / REGISTRACIJA */
@@ -127,3 +182,80 @@ label.zvezdica:before {
 #prijava_link:hover{
 	text-decoration:underline;
 }
+
+
+/* Dashboard */
+.razred_podatki
+{
+	width: 100%;
+	clear: both;
+}
+
+/*	Obroba za dva izpiska v eni vrsti	*/
+.obroba_vec
+{
+	border-color:#28b867;
+	border-style: solid;
+	border-radius: 20px 20px 20px 20px;
+	width: 40%;
+	height: 100%;
+	margin: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	float: left;
+	min-width: 400px;
+}
+
+/*	Obroba za en izpisek v eni vrsti	*/
+.obroba
+{
+	border-color:#28b867;
+	border-style: solid;
+	border-radius: 20px 20px 20px 20px;
+	height: 100%;
+	width: 83%;
+	padding-right: 20px;
+	margin: 20px;
+	padding: 10px;
+	float: left;
+	min-width: 400px;
+}
+
+.podatki
+{
+	height: 160px;
+}
+
+.podatki_list
+{
+	list-style-type: none;
+	float: left;
+}
+
+.podatki_list li
+{
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+	border-bottom-width: 2px;
+}
+
+.elementi
+{
+	float: left;
+	display: block;
+}
+
+.vrednosti
+{
+	float: left;
+	display: block;
+	margin: 0;
+}
+
+/*	Chart settings	*/
+
+#graf_razporedje_ocen
+{
+	min-width: 800px;
+}
+

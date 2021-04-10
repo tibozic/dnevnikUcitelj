@@ -99,6 +99,6 @@ class __TwigTemplate_8ce959783712322ca9706bbbba90d228812ae4021c692d9472fd6e63a77
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/move_column.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\move_column.twig");
+        return new Source("", "columns_definitions/move_column.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\move_column.twig");
     }
 }

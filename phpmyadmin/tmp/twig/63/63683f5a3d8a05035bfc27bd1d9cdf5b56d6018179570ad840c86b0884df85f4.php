@@ -391,6 +391,6 @@ $context["sub_partition"], "getIndexLength", [], "method", false, false, false, 
 
     public function getSourceContext()
     {
-        return new Source("", "table/structure/display_partitions.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\table\\structure\\display_partitions.twig");
+        return new Source("", "table/structure/display_partitions.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\table\\structure\\display_partitions.twig");
     }
 }

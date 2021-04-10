@@ -8,7 +8,7 @@ class IzpisZapiskov extends BaseController
 
 
 
-		$data["title"]="Izpis";
+		$data["title"]="Izpis zapiskov";
 
 		/*
 
@@ -24,10 +24,11 @@ class IzpisZapiskov extends BaseController
 		*/
 
 		$builder = $db->table('zapisek');
-		$builder->select('idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred');
+		$builder->select('idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred, nazivPredmet');
 		$builder->join('uporabnik', 'Uporabnik_idUporabnik=idUporabnik', 'left');
 		$builder->join('dijak', 'zapisek.Dijak_idDijak=idDijak', 'left');
 		$builder->join('razred', 'dijak.Razred_idRazred=idRazred', 'left');
+		$builder->join('predmet', 'zapisek.Predmet_idPredmet=predmet.idPredmet', 'left');
 		$builder->where('Uporabnik_idUporabnik', $_SESSION['idUporabnik']);
 		$builder->orwhere('razred.idRazrednik', $_SESSION['idUporabnik']);
 		$builder->orderBy('datumZapisek', 'DESC');

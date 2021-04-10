@@ -8,8 +8,9 @@ class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        // Preusmeritev uporabnika, ki ni prijavljen na login stran
         if(! session()->get('jePrijavljen')){
-        	return redirect()->to('/public/login');
+        	return redirect()->to(base_url("login"));
         }
     }
 

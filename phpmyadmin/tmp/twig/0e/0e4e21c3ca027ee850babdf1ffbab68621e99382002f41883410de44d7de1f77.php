@@ -86,6 +86,6 @@ class __TwigTemplate_aced072a124f1c4761010569d0fad3b7bb207c647b2b32e2cfa43925e3f
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_length.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_length.twig");
+        return new Source("", "columns_definitions/column_length.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_length.twig");
     }
 }

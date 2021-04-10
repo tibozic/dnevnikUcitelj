@@ -2,6 +2,12 @@
 
 
 
+Izgled strani:
+	[x] -> Dashboard design
+		[ ] -> responsive charts?
+
+
+
 Urejnaje pravic:
 	[x] -> uporabnik brez vloge nima dostopa do nicesar
 
@@ -11,7 +17,6 @@ Urejnaje pravic:
 	[x] -> uporabnik, ki ni administartor ne sme dostopati do adminstratorskih strani
 
 	[x] -> če uporabnik ni prijavljen ga ne spusti v stran
-		[ ] -> ??? neuporabnik še vedno vidi prvo stran (http://localhost/public/)
 		[ ] -> error msges and functions when not logged in (http://localhost/public/vnos/vnosZapiska)
 
 	[ ] -> pravice aplikacije v podatkovni bazi
@@ -29,7 +34,7 @@ Zapisek:
 
 Prikaz grafa: 
 	[ ] -> hover za prikaz naslova zapiska
-		[ ] -> gumb za preusmeritev na zapisek
+		[x] -> gumb za preusmeritev na zapisek
 
 
 
@@ -46,11 +51,6 @@ Graf Ocen:
 	[x] -> order by
 	[x] -> povp. ocena dneva group by date
 
-Podatkovna baza:
-	[ ] -> ??? Vnos z pomočjo modelov?
-
-Domača stran:
-	[ ] -> ??? obvestila ravnatelja/administratorja
 
 
 povprečna ocena skozi čas (graf) -> ko pridobi oceno se posodbi
@@ -58,8 +58,12 @@ izgledi
 graf
 razrednik gleda ločeno po razredih
 
+https://i.pinimg.com/originals/6c/42/32/6c423274950d320434ce3cfa4819e407.png
+
+https://i.pinimg.com/originals/ce/5e/ab/ce5eabe15a5d52e21532d0ebe1ac2c68.png
 
 
+https://gillde.com/wp-content/uploads/2020/06/Dashboard-34.png
 Colors:
 https://coolors.co/05396b-389583-248e66-5cdb94-edf5e0
 https://www.awwwards.com/sites/grosse-lanterne-1

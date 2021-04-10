@@ -10,8 +10,7 @@
 <body>
 
 <!-- MENU -->
-<nav class="navbar navbar-expand-lg menu_celoten">
-<div class="container">
+<nav class="menu_celoten">
   <ul class="navbar-nav">
   	<?php
   		if(session()->get('vlogaUporabnik') == 'Administrator' || session()->get('vlogaUporabnik') == 'Ravnatelj'){
@@ -22,7 +21,7 @@
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/administracija'>Administracija </a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisDijakov'>Dijaki </a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/test'>Test </a></li>
-				<li id='logout'><a class='nav-link vsebina' href='".base_url()."home/odjava'>Odjava </a></li>
+				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
 
   			";
   		}else{
@@ -39,6 +38,9 @@
   		}
   	?>
   </ul>
-</div>
 </nav><br>
+<div class="naslovnica">
+	<h1><?php echo $title; ?></h1>
+</div>
+<div class="container2">
 

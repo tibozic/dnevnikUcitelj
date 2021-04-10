@@ -72,6 +72,6 @@ class __TwigTemplate_7f9997589dfdb8e67385b17ebf89666221f628bd9726b759dcee5b2c490
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/null_display.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\null_display.twig");
+        return new Source("", "display/results/null_display.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\null_display.twig");
     }
 }

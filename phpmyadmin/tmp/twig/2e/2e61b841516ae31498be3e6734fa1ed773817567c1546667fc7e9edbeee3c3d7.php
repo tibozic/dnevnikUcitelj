@@ -72,6 +72,6 @@ class __TwigTemplate_a439f7892e0d3f2a7166eed0d2b5b6e7458d6bd50b51c94d99d83543c8b
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_comment.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_comment.twig");
+        return new Source("", "columns_definitions/column_comment.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_comment.twig");
     }
 }

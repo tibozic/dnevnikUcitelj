@@ -49,7 +49,7 @@ class IzpisDijakov extends BaseController
 			*/
 
 		$builder = $db->table('dijak');
-		$builder->select('idDijak, imeDijak, priimekDijak');
+		$builder->select('idDijak, imeDijak, priimekDijak, nazivRazred');
 		$builder->join('razred', 'Razred_idRazred=idRazred', 'left');
 		$builder->where('Razred.idRazrednik', $_SESSION['idUporabnik']);
 

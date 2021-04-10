@@ -1,6 +1,8 @@
 <?php namespace App\Controllers;
 use \Config\Database;
 
+use App\Models\Vnos_model;
+
 class Vnos extends BaseController
 {
 	public function index($idZapiska='null'){
@@ -11,22 +13,30 @@ class Vnos extends BaseController
 
 		*/
 
+		$session=session();
 		if($idZapiska != 'null'){
 			$data['podatki'] = Vnos::pridobiPodatke($idZapiska);
+			$data['naslov'] = "Uredite star zapisek:";
+			$data['gumb'] = "Shrani";
+			$data['title'] = "Urejanje zapiska";
 		}else{
 			$data['podatki'] = [(object)[
 				'idZapisek' => 'null',
 				'naslovZapisek' => '',
 				'ocenaZapisek' => 0,
 				'vsebinaZapisek' => '',
-				'Dijak_idDijak' => null
+				'Dijak_idDijak' => null,
+				'predmet_idPredmet' => null
 			]];
+			$data["naslov"] = "Ustvarite nov zapisek:";
+			$data["gumb"] = "Ustvari";
+			$data["title"] = "Ustvarjanje zapiska";
 		}
 
 		//$session=session();
 
-    	$data["title"]="Vnos";
-
+		$predmet_podatki = new Vnos_model();
+		$data['predmeti'] = $predmet_podatki->vnos_predmet_get($session->get('idUporabnik'));
 
 		$results=$this->izpisiDijake();
 		$data["results"]=$results;
@@ -108,6 +118,7 @@ class Vnos extends BaseController
 			'Uporabnik_idUporabnik' => $_SESSION['idUporabnik'],
 			'Dijak_idDijak' => $_POST['dijak'],
 			'Dijak_Razred_idRazred' => $idRazred,
+			'predmet_idPredmet' => $_POST['predmet'],
 		];
 
 		// podatke sharni v PB
@@ -134,7 +145,7 @@ class Vnos extends BaseController
 
 	private function pridobiPodatke($idZapisek){
 		$db = \Config\Database::connect();
-		$builder = "SELECT idZapisek, naslovZapisek, ocenaZapisek, vsebinaZapisek, Dijak_idDijak FROM zapisek WHERE idZapisek=".$idZapisek.";";
+		$builder = "SELECT idZapisek, naslovZapisek, ocenaZapisek, vsebinaZapisek, Dijak_idDijak, predmet_idPredmet FROM zapisek WHERE idZapisek=".$idZapisek.";";
 		$query = $db->query($builder);
 		$results = $query->getResult();
 

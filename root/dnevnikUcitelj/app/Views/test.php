@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-
-
-</head>
-<body>
-	<div class="container">
-		<h1>This is a test</h1>
 		
 
 		<div id="piechart"></div>
@@ -51,7 +41,7 @@
 			  ]);
 
 
-			  var options = {
+			var options = {
 				title: 'Napredek dijaka čez čas',
 				width: 900,
 				height: 500,
@@ -65,7 +55,8 @@
 				},
 				// trend line
 				trendlines: { 0: {
-					type: 'polynomial', // type of curve
+					type: 'exponential', // type of curve
+										// exponential
 					color: 'green',
 					lineWidth: 2,
 					opacity: 0.5,
@@ -73,11 +64,11 @@
 					pointsVisible: false, // hides the points on graph
 					tooltip: false, // disables the tooltip on hover
 				}}
-			  };
+			};
 
-			  var chart = new google.visualization.LineChart(document.getElementById('piechart'));
+			var chart = new google.visualization.LineChart(document.getElementById('piechart'));
 
-			  chart.draw(data, options);
+			chart.draw(data, options);
 
 
 			google.visualization.events.addListener(chart, 'select', function(e)

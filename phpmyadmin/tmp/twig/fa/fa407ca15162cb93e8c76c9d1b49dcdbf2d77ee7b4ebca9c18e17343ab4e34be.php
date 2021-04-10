@@ -303,6 +303,6 @@ class __TwigTemplate_7c6192bb2832f6b029153dbea48ba8169fce96b60dfec93e86351e5047d
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/table_fields_definitions.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\table_fields_definitions.twig");
+        return new Source("", "columns_definitions/table_fields_definitions.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\table_fields_definitions.twig");
     }
 }

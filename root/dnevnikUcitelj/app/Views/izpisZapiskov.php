@@ -1,4 +1,3 @@
-<div class="container">
 
 	<!-- FORMAT: 
 	<div class="izpisek">
@@ -8,21 +7,18 @@
 		<p>Vsebina</p>
 	</div>
 	-->
-	<h1>
-		Vaši zapiski:
-	</h1>
-
+	<div class="izpiski">
 	<?php
-
 		foreach($zapiski as $zapisek){
 			echo '<div class="izpisek">
-					<h3>'.trim($zapisek->naslovZapisek).', <a href="'.base_url().'/vnos/index/'.$zapisek->idZapisek.'">Uredi</a></h3> 					
-					<p>'.$zapisek->imeUporabnik.' '.$zapisek->priimekUporabnik.', '.$zapisek->datumZapisek.'</p>
+					<h3>'.trim($zapisek->naslovZapisek).'</a></h3> 
+					<p>'.$zapisek->nazivPredmet. ", ".$zapisek->imeUporabnik.' '.$zapisek->priimekUporabnik.', '.$zapisek->datumZapisek.'</p>
 					<p>'.$zapisek->imeDijak.' '.$zapisek->priimekDijak.', '. $zapisek->nazivRazred.'</p>
-					<p>'.$zapisek->vsebinaZapisek.'</p>
-				</div><br><br>';
+					<p class="zapisek_vsebina">'.$zapisek->vsebinaZapisek.'</p>
+					<a href="'.base_url().'/zapisek_pregled/index/'.$zapisek->idZapisek.'"><button class="btn btn-success">Preglej</button></a>
+					<a href="'.base_url().'/vnos/index/'.$zapisek->idZapisek.'"><button class="btn btn-primary">Uredi</button></a>
+				</div>';
 		}
 
 	?>
-
-</div>
+	</div>

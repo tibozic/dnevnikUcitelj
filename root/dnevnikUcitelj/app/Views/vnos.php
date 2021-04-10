@@ -1,20 +1,35 @@
-<div class="container">
 	<form action="<?php base_url() ?>/vnos/vnosZapiska<?php echo '/'.$podatki[0]->idZapisek ?>" method="post">
   		<div class="form-group">
     		<label for="naslov">Naslov:</label>
     		<input type="text" class="form-control" id="naslov" name="naslov" value="<?php echo $podatki[0]->naslovZapisek ?>">
-      </div>
+    	</div>
+		<div class="form-group">
+    		<label for="predmet">Predmet:</label>
+    		<select name="predmet" id="predmet" class="form-control">
+    			<?php
+     				foreach($predmeti as $predmet){
+    					echo $predmet->idPredmet;
+              			if($predmet->idPredmet == $podatki[0]->predmet_idPredmet){
+                			echo "<option value=".$predmet->idPredmet." selected>".$predmet->nazivPredmet."</option>";
+              			}else{
+    						echo "<option value=".$predmet->idPredmet.">".$predmet->nazivPredmet."</option>";
+            			}
+    				}   				
+    			?>
+    		</select>
+  		</div>
+
   		<div class="form-group">
     		<label for="dijak">Dijak:</label>
     		<select name="dijak" id="dijak" class="form-control">
     			<?php
-    				foreach($results as $row){
+					foreach($results as $row){
     					echo $row->idDijak;
-              if($row->idDijak == $podatki[0]->Dijak_idDijak){
-                echo "<option value=".$row->idDijak." selected>".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
-              }else{
-    					 echo "<option value=".$row->idDijak.">".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
-              }
+						if($row->idDijak == $podatki[0]->Dijak_idDijak){
+							echo "<option value=".$row->idDijak." selected>".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
+						}else{
+    						 echo "<option value=".$row->idDijak.">".$row->imeDijak." ".$row->priimekDijak.", ".$row->nazivRazred."</option>";
+						}
     				}
     			?>
     		</select>
@@ -41,6 +56,5 @@
     		<label for="vsebina">Vsebina:</label>
     		<textarea name="vsebina" id="vsebina" class="form-control"><?php echo $podatki[0]->vsebinaZapisek ?></textarea>
   		</div>
-  		<button type="submit" class="btn btn-primary">Shrani</button> 
+  		<button type="submit" class="btn btn-primary"><?php echo $gumb; ?></button> 
 </form>	
-</div>

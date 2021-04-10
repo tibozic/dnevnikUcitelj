@@ -1,4 +1,3 @@
-<div class="container">
 
 
 	<form action="<?php base_url() ?>/urejanjeUporabnika/shrani/<?php echo $uporabnik[0]->idUporabnik; ?>" method="post">
@@ -41,5 +40,3 @@
 		<br>
 		<input type="submit" class="btn btn-primary" value="Shrani">
 	</form>
-
-</div>

@@ -62,6 +62,6 @@ class __TwigTemplate_185cc1eecd286dbd52f01ab87c8243e3a3503cf9dfca905dc1db67b9332
 
     public function getSourceContext()
     {
-        return new Source("", "table/browse_foreigners/show_all.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\table\\browse_foreigners\\show_all.twig");
+        return new Source("", "table/browse_foreigners/show_all.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\table\\browse_foreigners\\show_all.twig");
     }
 }

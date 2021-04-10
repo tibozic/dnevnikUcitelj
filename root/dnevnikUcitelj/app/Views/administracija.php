@@ -1,5 +1,3 @@
-<div class="container">
-	<h1>Urejanje uporabnikov</h1>
 	<div>
 		<table class="table">
 			<tr>
@@ -14,11 +12,11 @@
 			foreach($uporabniki as $uporabnik){
 				echo "
 				<tr>
-					<th>".$uporabnik->imeUporabnik."</th>
-					<th>".$uporabnik->priimekUporabnik."</th>
-					<th>".$uporabnik->emailUporabnik."</th>
-					<th>".$uporabnik->nazivVloga."</th>
-					<th><a href='".base_url()."/urejanjeUporabnika/index/".$uporabnik->idUporabnik."'>Uredi</a></th>
+					<td>".$uporabnik->imeUporabnik."</td>
+					<td>".$uporabnik->priimekUporabnik."</td>
+					<td>".$uporabnik->emailUporabnik."</td>
+					<td>".$uporabnik->nazivVloga."</td>
+					<td><a href='".base_url()."/urejanjeUporabnika/index/".$uporabnik->idUporabnik."'>Uredi</a></td>
 				</tr>";
 			}
 
@@ -30,5 +28,3 @@
 		</table>
 	</div>
 
-
-</div>

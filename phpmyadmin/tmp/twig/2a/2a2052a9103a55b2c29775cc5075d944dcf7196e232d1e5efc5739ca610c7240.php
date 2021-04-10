@@ -113,6 +113,6 @@ class __TwigTemplate_c48d42a387efdf2b25949e5c7dd29915c83907e5c5cb5ea621a0b32cba7
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_attribute.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_attribute.twig");
+        return new Source("", "columns_definitions/column_attribute.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_attribute.twig");
     }
 }

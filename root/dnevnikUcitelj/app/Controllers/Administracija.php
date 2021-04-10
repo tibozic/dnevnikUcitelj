@@ -13,6 +13,7 @@ class Administracija extends BaseController
 
 		$session=session();
 		$db = \Config\Database::connect();
+		// $this->load->model("Administracija_model");
 
 
 
@@ -33,7 +34,8 @@ class Administracija extends BaseController
 
 		$query = $builder->get();
 		$results=$query->getResult();
-		$data["uporabniki"]=$results;
+		$data["uporabniki"] = $results;
+		//$data["uporabniki"]=$this->Administracija_model->pridobi_uporabnike();
 
 
 

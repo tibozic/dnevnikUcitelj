@@ -59,6 +59,6 @@ class __TwigTemplate_85ee03a52c2f5aa5d8d399387b04c3dd446094cc86e69b64bf5962487dc
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/empty_display.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\empty_display.twig");
+        return new Source("", "display/results/empty_display.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\empty_display.twig");
     }
 }

@@ -77,6 +77,6 @@ class __TwigTemplate_34a6115821b78959aa271ae1d581a23f19a3a2b9c1ddcc6bf94f025a7f2
 
     public function getSourceContext()
     {
-        return new Source("", "columns_definitions/column_type.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_type.twig");
+        return new Source("", "columns_definitions/column_type.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\columns_definitions\\column_type.twig");
     }
 }

@@ -8,8 +8,9 @@ class NoAuth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        // Preusmeri uporabnika, ki je prijavljen iz login strani na domačo stran
         if(session()->get('jePrijavljen')){
-        	return redirect()->to('/public/home');
+        	return redirect()->to(base_url("home"));
         }
     }
 
