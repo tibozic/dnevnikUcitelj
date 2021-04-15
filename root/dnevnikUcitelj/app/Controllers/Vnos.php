@@ -38,7 +38,7 @@ class Vnos extends BaseController
 		$predmet_podatki = new Vnos_model();
 		$data['predmeti'] = $predmet_podatki->vnos_predmet_get($session->get('idUporabnik'));
 
-		$results=$this->izpisiDijake();
+		$results=$this->izpisiDijake(session()->get('idUporabnik'));
 		$data["results"]=$results;
 		if($this->request->getMethod() == 'post'){
 			vnosZapiska($idZapiska);
@@ -48,7 +48,7 @@ class Vnos extends BaseController
 		echo view('footer.php');
 	}
 
-	private function izpisiDijake(){
+	private function izpisiDijake($idUporabnik){
 		
 		/*
 
@@ -69,7 +69,11 @@ class Vnos extends BaseController
 		$builder = $db->table('dijak');
 		$builder->select('idDijak,imeDijak,priimekDijak,nazivRazred');
 		$builder->join('razred', 'Razred_idRazred=idRazred', 'left');
-		$builder->orderBy('Razred_idRazred', 'ASC');
+		$builder->join('razredobiskujepredmet', 'razredobiskujepredmet.Razred_idRazred=razred.idRazred', 'left');
+		$builder->join('predmet', 'predmet.idPredmet=razredobiskujepredmet.Predmet_idPredmet', 'left');
+		$builder->join('uciteljucipredmet', 'uciteljucipredmet.Predmet_idPredmet=predmet.idPredmet', 'left');
+		$builder->where('uciteljucipredmet.Uporabnik_idUporabnik', $idUporabnik);
+		$builder->orderBy('razred.idRazred', 'ASC');
 		
 		$query = $builder->get();
 		$results = $query->getResult();
@@ -137,7 +141,7 @@ class Vnos extends BaseController
 
 
 
-		return redirect()->to(base_url().'/izpisZapiskov');
+		return redirect()->to(base_url().'/izpisZapiskov_moji');
 	}
 
 

@@ -1,10 +1,10 @@
 
-	<h2>Pozdravljen, <?php echo session()->get('imeUporabnik') ?></h2>
+	<h2>Pozdravljen, <?php echo session()->get('imeUporabnik') . " " . session()->get('priimekUporabnik') ?></h2>
 	<h3>
 	Vloga: <?php echo session()->get('vlogaUporabnik') ?>
 	</h3>
 	<?php
-		if (session()->get('vlogaUporabnik') == "Administrator")
+		if (session()->get('vlogaUporabnik') == "Razrednik" && isset($razred_naziv[0]))
 		{
 	?>
 			<br><br>
@@ -58,8 +58,11 @@
 			?>
 	<?php
 		}
+		else if (session()->get('vlogaUporabnik') == "Razrednik" && isset($razred_naziv[0]) || session()->get('vlogaUporabnik') == "Učitelj")
+		{
 	?>
 
+		<br><br>
 		<div class="razred_podatki">
 			<h2>Podatki o zapiskih učitelja: <?php echo $ucitelj_podatki_osnovno[0]->imeUporabnik . ", " . $ucitelj_podatki_osnovno[0]->priimekUporabnik; ?></h2>
 			<div class="podatki">
@@ -103,6 +106,10 @@
 				</div>
 			</div>
 		<br><br><br><br>
+	
+	<?php
+		}
+	?>
 
 
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
@@ -112,44 +119,31 @@
 		google.charts.load('current', {'packages':['corechart']});
 		//google.charts.load('current', {'packages':['table']});
 		//google.charts.setOnLoadCallback(columnChart);
+	<?php
+		if (session()->get('vlogaUporabnik') == 'Razrednik' && isset($razred_naziv[0]))
+		{
+	?>
 		google.charts.setOnLoadCallback(lineChart);
 		google.charts.setOnLoadCallback(pieChart);
 		google.charts.setOnLoadCallback(drawChartUcitelj);
 		google.charts.setOnLoadCallback(pieChartUcitelj);
 
-
-
-		function columnChart() {
-
-			var data = new google.visualization.arrayToDataTable([
-				['Ocena', 'Število pojavov', {role: 'style'}],
-				[5, <?php echo $razred_ocene['st_pet']->st_pet; ?>, '#0094da'],
-				[4, <?php echo $razred_ocene['st_stiri']->st_stiri; ?>, '#0094da'],
-				[3, <?php echo $razred_ocene['st_tri']->st_tri; ?>, '#0094da'],
-				[2, <?php echo $razred_ocene['st_dve']->st_dve; ?>, '#0094da'],
-				[1, <?php echo $razred_ocene['st_ena']->st_ena; ?>, '#0094da'],
-			]);
-			// data.addColumn('{role: "style"', "Style");
-
-			// data.addRows([
-			// 	[5, 5], [4, 7], [3, 3],
-			// 	[2, 1], [1, 3]
-			// ]);
-
-
-			var options = {
-				title: 'Ocene in število njihovih pojavov',
-				height: 400,
-				width: 650,
-				legend: {position: "none"},
-				color: '#0094da',
-			};
-
-			var chart = new google.visualization.ColumnChart(document.getElementById('graf_razporedje_ocen'));
-
-			chart.draw(data, options);
+	
+	<?php
 		}
+		elseif (session()->get('vlogaUporabnik') == 'Učitelj')
+		{
+	?>
+		google.charts.setOnLoadCallback(drawChartUcitelj);
+		google.charts.setOnLoadCallback(pieChartUcitelj);
+	<?php
+		}
+	?>
 
+	<?php
+		if (session()->get('vlogaUporabnik') == 'Razrednik' && isset($razred_naziv[0]))
+		{
+	?>
 
 		function lineChart() {
 
@@ -198,9 +192,9 @@
 			let options = {
 				title: 'Napredek dijakov čez čas',
 				legend: 'none',
+				colors: ['#0094da'],
 				width: 650,
 				height: 500,
-				color: '#0094da',
 				hAxis: {
 					format: 'MM/dd/yy',
 					gridlines: {count: 15}
@@ -214,13 +208,13 @@
 				trendlines: { 0: {
 					type: 'polynomial', // type of curve
 					degree: 2,
-					color: 'green',
+					color: '#26cc78',
 					lineWidth: 2,
 					opacity: 0.5,
 					pointSize: 5,
 					pointsVisible: false, // hides the points on graph
 					tooltip: false, // disables the tooltip on hover
-				}}
+				}},
 			};
 
 			let chart = new google.visualization.LineChart(document.getElementById('graf_ocene_cez_cas'));
@@ -246,12 +240,18 @@
 				title: 'Ocene in število njihovih pojavov',
 				height: 400,
 				width: 650,
+				colors:  ['#0094da', '#00add9', '#00c0b4', '#26cc78', '#a6ce39'],
 			};
 
 			var chart = new google.visualization.PieChart(document.getElementById('graf_razporedje_ocen2'));
 
 			chart.draw(data, options);
 		}
+	<?php
+		}
+		if (session()->get('vlogaUporabnik') == 'Učitelj')
+		{
+	?>
 	function drawChartUcitelj() {
 
 		let data = new google.visualization.DataTable();
@@ -301,6 +301,7 @@
 			title: 'Ocene, ki jih je podeljeval ucitelj čez čas',
 			legend: 'none',
 			width: 650,
+			colors: ['#0094da'],
 			height: 400,
 			hAxis: {
 				format: 'MM/dd/yy',
@@ -315,7 +316,7 @@
 			trendlines: { 0: {
 				type: 'polynomial', // type of curve
 				degree: 2,
-				color: 'green',
+				color: '#26cc78',
 				lineWidth: 3,
 				opacity: 0.5,
 				pointSize: 5,
@@ -328,26 +329,6 @@
 		let chart = new google.visualization.LineChart(document.getElementById('graf_ocene_cez_cas_ucitelj'));
 
 		chart.draw(view, options);
-
-		google.visualization.events.addListener(chart, 'select', function(e)
-				{
-					// get selected element
-					let selection = chart.getSelection();
-					// get first row of selected element 
-					let row = selection[0].row;
-					// get id of selected element which is 4th(3) colomun of selected row
-					let idZapisek = data.getValue(row,3);
-					//console.log(selection);
-
-
-					let baseurl = '<?php echo base_url(); ?>';
-					let link = baseurl + "/vnos/index/"+idZapisek;
-					//console.log(link);
-					
-
-					window.location.replace(link);
-				}
-			);
 
 
 	}
@@ -366,15 +347,15 @@
 			title: 'Ocene in število njihovih pojavov',
 			width: 650,
 			height: 400,
+			colors:  ['#0094da', '#00add9', '#00c0b4', '#26cc78', '#a6ce39'],
 		};
 
 		var chart = new google.visualization.PieChart(document.getElementById('graf_razporedje_ocen2_ucitelj'));
 
 		chart.draw(data, options);
 	}
+	<?php
+		}
+	?>
 
 	</script>
-
-
-
-

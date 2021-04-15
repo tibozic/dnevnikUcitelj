@@ -57,7 +57,8 @@ $routes->get('(?i)Vnos', '(?i)Vnos::vnosZapiska', ['filter' => 'auth']);
 
 
 
-$routes->get('(?i)izpisZapiskov', 'IzpisZapiskov::index', ['filter' => 'auth']);
+$routes->get('(?i)izpisZapiskov', 'IzpisZapiskov_razred::index', ['filter' => 'auth']);
+$routes->get('(?i)izpisZapiskov', 'IzpisZapiskov_moji::index', ['filter' => 'auth']);
 
 $routes->get('(?i)izpisDijakov', 'izpisDijakov::index', ['filter' => 'auth']);
 

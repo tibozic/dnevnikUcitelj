@@ -9,31 +9,42 @@
 
 <body>
 
-<!-- MENU -->
+<!-- MENU ☰-->
 <nav class="menu_celoten">
   <ul class="navbar-nav">
   	<?php
   		if(session()->get('vlogaUporabnik') == 'Administrator' || session()->get('vlogaUporabnik') == 'Ravnatelj'){
 			echo "
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Vnos </a></li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov'>Zapiski </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Nov zapisek </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_moji'>Moji Zapiski </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_razred'>Zapiski Razreda</a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/administracija'>Administracija </a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisDijakov'>Dijaki </a></li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/test'>Test </a></li>
 				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
 
   			";
-  		}else{
-			  echo "
-			  	<div class='menu_vsebina_kvadrat'>
-				<li class='nav-item'> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
-				</div>
-				<li class='nav-item menu_vsebina_kvadrat'> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Vnos </a></li>
-				<li class='nav-item menu_vsebina_kvadrat'> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov'>Zapiski </a></li>
-				<li class='nav-item menu_vsebina_kvadrat'> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisDijakov'>Dijaki </a></li>
-				<li class='nav-item menu_vsebina_kvadrat'> <a class='nav-link menu_vsebina_text' href='".base_url()."/test'>Test </a></li>
-				<li class='nav-item menu_kvadrat' id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
+  		}
+		else if (session()->get('vlogaUporabnik') == 'Razrednik')
+		{
+			echo "
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Nov zapisek </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_moji'>Moji Zapiski </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_razred'>Zapiski Razreda</a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisDijakov'>Dijaki </a></li>
+				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
+
+  			";
+		}
+		else
+		{
+			echo "
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Nov zapisek </a></li>
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_moji'>Moji Zapiski </a></li>
+				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
+
   			";
   		}
   	?>

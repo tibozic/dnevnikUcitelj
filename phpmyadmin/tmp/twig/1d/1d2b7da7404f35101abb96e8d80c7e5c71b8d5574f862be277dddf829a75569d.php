@@ -66,6 +66,6 @@ class __TwigTemplate_df3ddca0ceef179616eca89a8cd9d6321f18e6745a6170ea4e7df888966
 
     public function getSourceContext()
     {
-        return new Source("", "display/results/page_selector.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\display\\results\\page_selector.twig");
+        return new Source("", "display/results/page_selector.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\display\\results\\page_selector.twig");
     }
 }

@@ -18,6 +18,7 @@ body
 
 .menu_celoten{
 	position: fixed;
+	z-index: 100;
 	background-color:#535355;
 	width: 15%;
 	height: 100%;
@@ -126,9 +127,14 @@ label.zvezdica:before {
 }
 
 /* IZGLED ZAPISKA */
+.izpiski
+{
+	float: left;
+	margin-bottom: 10px;
+}
 .izpisek
 {
-	border-color: #28b867;
+	border-color: #00c0b4;
 	border-style: solid;
 	border-radius: 10px 10px 10px 10px;
 	padding: 20px;
@@ -163,7 +169,7 @@ label.zvezdica:before {
 	color:black;
 	border-radius:25px 25px 25px 25px;
 	border-style:solid;
-	border-color:#4caf50;
+	border-color:#00c0b4;
 }
 
 .register_error ul{
@@ -194,7 +200,7 @@ label.zvezdica:before {
 /*	Obroba za dva izpiska v eni vrsti	*/
 .obroba_vec
 {
-	border-color:#28b867;
+	border-color:#00c0b4;
 	border-style: solid;
 	border-radius: 20px 20px 20px 20px;
 	width: 40%;
@@ -209,7 +215,7 @@ label.zvezdica:before {
 /*	Obroba za en izpisek v eni vrsti	*/
 .obroba
 {
-	border-color:#28b867;
+	border-color:#00c0b4;
 	border-style: solid;
 	border-radius: 20px 20px 20px 20px;
 	height: 100%;

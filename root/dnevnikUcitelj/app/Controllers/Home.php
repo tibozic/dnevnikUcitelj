@@ -19,10 +19,14 @@ class Home extends BaseController
 		$podatki_ucitelj = new Ucitelj_model();
 
 		$data['razred_naziv'] = $podatki_razred_osnovno->razred_naziv_get($session->get('idUporabnik'));
-		$idRazred = $data['razred_naziv'][0]->idRazred;
-		$data['razred_osnovno'] = $podatki_razred_osnovno->razred_podatki_osnovno_get($idRazred);
-		$data['razred_ocene'] = $podatki_razred_osnovno->razred_podatki_ocene_get($idRazred);
-		$data['razred_ocene_pojav'] = $podatki_razred_osnovno->razred_ocene_get($idRazred);
+
+		if (session()->get('vlogaUporabnik') == "Razrednik" && isset($data['razred_naziv'][0]))
+		{
+			$idRazred = $data['razred_naziv'][0]->idRazred;
+			$data['razred_osnovno'] = $podatki_razred_osnovno->razred_podatki_osnovno_get($idRazred);
+			$data['razred_ocene'] = $podatki_razred_osnovno->razred_podatki_ocene_get($idRazred);
+			$data['razred_ocene_pojav'] = $podatki_razred_osnovno->razred_ocene_get($idRazred);
+		}
 
 		$data['ucitelj_podatki_osnovno'] = $podatki_ucitelj->ucitelj_podatki_osnovno_get($idUporabnik);
 		$data['ucitelj_podatki'] = $podatki_ucitelj->ucitelj_podatki_get($idUporabnik);

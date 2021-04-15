@@ -55,6 +55,21 @@
 			</div>
 		</div>
 		<br><br><br><br>
+	<div class="izpiski">
+	<h2>Zapiski dijaka: </h2>
+	<?php
+		foreach($zapiski as $zapisek){
+			echo '<div class="izpisek">
+					<h3>'.trim($zapisek->naslovZapisek).'</a></h3> 
+					<p>'.$zapisek->nazivPredmet. ", ".$zapisek->imeUporabnik.' '.$zapisek->priimekUporabnik.', '.$zapisek->datumZapisek.'</p>
+					<p>'.$zapisek->imeDijak.' '.$zapisek->priimekDijak.', '. $zapisek->nazivRazred.'</p>
+					<p class="zapisek_vsebina">'.$zapisek->vsebinaZapisek.'</p>
+					<a href="'.base_url().'/zapisek_pregled/index/'.$zapisek->idZapisek.'"><button class="btn btn-success">Preglej</button></a>
+				</div>';
+		}
+
+	?>
+	</div>
 
 
 
@@ -118,7 +133,8 @@
 		let options = {
 			title: 'Napredek dijaka čez čas',
 			legend: 'none',
-			width: 1200,
+			width: 1000,
+			colors: ['#0094da'],
 			height: 500,
 			hAxis: {
 				format: 'MM/dd/yy',
@@ -133,7 +149,7 @@
 			trendlines: { 0: {
 				type: 'polynomial', // type of curve
 				degree: 2,
-				color: 'green',
+				color: '#26cc78',
 				lineWidth: 3,
 				opacity: 0.5,
 				pointSize: 5,
@@ -183,8 +199,9 @@
 
 		var options = {
 			title: 'Ocene in število njihovih pojavov',
-			width: 1200,
+			width: 1000,
 			height: 500,
+			colors:  ['#0094da', '#00add9', '#00c0b4', '#26cc78', '#a6ce39'],
 		};
 
 		var chart = new google.visualization.PieChart(document.getElementById('graf_razporedje_ocen2'));

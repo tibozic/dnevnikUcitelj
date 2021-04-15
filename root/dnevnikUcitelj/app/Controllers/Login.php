@@ -1,6 +1,7 @@
 <?php namespace App\Controllers;
 use \Config\Database;
 //use App\Cotrollers;
+use App\Models\Login_model;
 
 class Login extends BaseController
 {
@@ -69,25 +70,9 @@ class Login extends BaseController
 		*/
 
 
-		$db = \Config\Database::connect();
+		$prijavni_model = new Login_model();
 
-
-		/*
-		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN vloga ON idVloga=Vloga_idVloga WHERE emailUporabnik LIKE '$email'";
-		$query = $db->query($builder);
-		$results=$query->getResult();
-
-		*/
-
-		$builder = $db->table('uporabnik');
-		$builder->select('idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga');
-		$builder->join('vloga', 'Vloga_idVloga=idVloga', 'left');
-		$builder->like('emailUporabnik', $email);
-
-		$query = $builder->get();
-		$results = $query->getResult();
-
-
+		$results = $prijavni_model->uporabnik_podatki_get($email);
 
 
 		$data=[

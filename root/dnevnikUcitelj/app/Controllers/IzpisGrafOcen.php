@@ -17,6 +17,7 @@ class IzpisGrafOcen extends BaseController
 		$data["ocene"] = $podatki_dijak->dijak_ocene_get($idDijak);
 		$data['ocene_osnovno'] = $podatki_dijak->dijak_ocene_osnovno_get($idDijak, $idRazred);
 		$data["dijak_ocene"] = $podatki_dijak->dijak_ocene2_get($idDijak);
+		$data['zapiski'] = $podatki_dijak->dijak_zapiski_get($idDijak);
 
 
 		echo view('header.php',$data);

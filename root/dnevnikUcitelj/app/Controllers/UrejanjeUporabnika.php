@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Models\Uporabnik_model;
+
 class UrejanjeUporabnika extends BaseController
 {
 	public function index($idUporabnik){
@@ -12,22 +14,15 @@ class UrejanjeUporabnika extends BaseController
 
 
 		$session=session();
-		$db = \Config\Database::connect();
+
+
+		$uporabnik_model = new Uporabnik_model();
+		$data["uporabnik"]=$uporabnik_model->uporabnik_podatki_get($idUporabnik);
+;
 
 
 
-		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN Vloga ON Vloga_idVloga=idVloga WHERE idUporabnik=".$idUporabnik;
-		$query = $db->query($builder);
-		$results=$query->getResult();
-		$data["uporabnik"]=$results;
-
-
-
-		// iz id vloge dobi naziv vloge
-		$builder="SELECT * FROM Vloga";
-		$query = $db->query($builder);
-		$results=$query->getResult();
-		$data["vloge"]=$results;
+		$data["vloge"]=$uporabnik_model->vloga_get();
 
 
 
@@ -70,7 +65,7 @@ class UrejanjeUporabnika extends BaseController
 
 
 
-		return redirect()->to('/public/administracija');
+		return redirect()->to(base_url('administracija'));
 	}
 
 

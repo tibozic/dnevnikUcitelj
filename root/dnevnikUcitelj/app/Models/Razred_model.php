@@ -146,4 +146,20 @@ class Razred_model extends Model{
 
 	}
 
+
+	public function razred_dijaki_get($idUporabnik)
+	{
+		$db = \Config\Database::connect();
+		$builder = $db->table('dijak');
+		$builder->select('idDijak, imeDijak, priimekDijak, nazivRazred');
+		$builder->join('razred', 'Razred_idRazred=idRazred', 'left');
+		$builder->where('Razred.idRazrednik', $idUporabnik);
+
+		$query = $builder->get();
+		$results = $query->getResult();
+
+		return $results;
+
+	}
+
 }

@@ -1,5 +1,7 @@
 <?php namespace App\Controllers;
 
+use App\Models\Administracija_model;
+
 class Administracija extends BaseController
 {
 	public function index(){
@@ -12,30 +14,15 @@ class Administracija extends BaseController
 
 
 		$session=session();
-		$db = \Config\Database::connect();
-		// $this->load->model("Administracija_model");
 
+		$administracija_model = new Administracija_model();
 
 
 		$data["title"]="Administracija";
 
-		
 
-		
-		/*	
-
-		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN Vloga ON Vloga_idVloga=idVloga";
-		*/
-
-
-		$builder = $db->table('uporabnik');
-		$builder->select('idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga');
-		$builder->join('Vloga', 'Vloga_idVloga=idVloga', 'left');
-
-		$query = $builder->get();
-		$results=$query->getResult();
+		$results = $administracija_model->uporabniki_get();
 		$data["uporabniki"] = $results;
-		//$data["uporabniki"]=$this->Administracija_model->pridobi_uporabnike();
 
 
 
@@ -45,14 +32,6 @@ class Administracija extends BaseController
 		echo view("administracija.php");
 		echo view("footer.php");
 	}
-
-	function urejanjeUporabnika($idUporabnik){
-		echo "idUporanika: ";
-		echo $idUporabnik;
-
-
-	}
-
 
 
 	//--------------------------------------------------------------------

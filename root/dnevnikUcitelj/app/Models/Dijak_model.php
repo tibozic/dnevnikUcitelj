@@ -134,5 +134,25 @@ class Dijak_model extends Model{
 
 	}
 
+	public function dijak_zapiski_get($idDijak)
+	{
+
+
+		$db = \Config\Database::connect();
+
+		$builder = $db->table('zapisek');
+		$builder->select('idZapisek,datumZapisek,naslovZapisek,vsebinaZapisek,imeUporabnik, priimekUporabnik, imeDijak, priimekDijak, nazivRazred, nazivPredmet');
+		$builder->join('uporabnik', 'Uporabnik_idUporabnik=idUporabnik', 'left');
+		$builder->join('dijak', 'zapisek.Dijak_idDijak=idDijak', 'left');
+		$builder->join('razred', 'dijak.Razred_idRazred=idRazred', 'left');
+		$builder->join('predmet', 'zapisek.Predmet_idPredmet=predmet.idPredmet', 'left');
+		$builder->where('dijak.idDijak', $idDijak);
+		$builder->orderBy('datumZapisek', 'DESC');
+
+		$query = $builder->get();
+		$results = $query->getResult();
+
+		return $results;
+	}
 
 }

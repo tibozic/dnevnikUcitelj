@@ -1,64 +1,27 @@
 <?php namespace App\Controllers;
 
+
+use App\Models\Razred_model;
+
 class IzpisDijakov extends BaseController
 {
 		
 	public function index(){
 
 
+		$session=session();
+
+		$razred_model = new Razred_model();
+		$idUporabnik = session()->get('idUporabnik');
 
 		$data["title"] = "Izpis dijakov";
-		$data["dijaki"]=IzpisDijakov::getDijaki();
+		$data["dijaki"]=$razred_model->razred_dijaki_get($idUporabnik);
 
 
 
 		echo view('header.php',$data);
 		echo view('izpisDijakov.php');
 		echo view('footer.php');
-	}
-
-
-
-	private function getDijaki(){
-
-		/*
-
-			Iz podatkovne baze pridobi vse dijake, ki jim je uporabnik razrednik.
-
-		*/
-
-
-
-		$session=session();
-		$db = \Config\Database::connect();
-
-
-
-
-		// need: idDijak, imeDjak, priimekDijak, Razred_idRazred
-
-		
-
-			/*
-		$builder="SELECT idDijak, imeDijak, priimekDijak FROM dijak
-			LEFT JOIN razred ON idRazred=Razred_idRazred
-			WHERE ".$_SESSION['idUporabnik']." LIKE Razred.idRazrednik";
-		$query = $db->query($builder);
-		$results=$query->getResult();
-		return $results;
-			*/
-
-		$builder = $db->table('dijak');
-		$builder->select('idDijak, imeDijak, priimekDijak, nazivRazred');
-		$builder->join('razred', 'Razred_idRazred=idRazred', 'left');
-		$builder->where('Razred.idRazrednik', $_SESSION['idUporabnik']);
-
-		$query = $builder->get();
-		$results = $query->getResult();
-
-		return $results;
-
-
 	}
 	//--------------------------------------------------------------------
 

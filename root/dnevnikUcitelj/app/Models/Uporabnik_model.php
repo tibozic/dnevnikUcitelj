@@ -2,22 +2,26 @@
 use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Model;
 
-class Uporabnik_model extends Model{
+class Uporabnik_model extends Model
+{
 
-	protected $table = 'uporabnik';
-	protected $primaryKey = 'idUporabnik';
+	public function uporabnik_podatki_get($idUporabnik)
+	{
+		$db = \Config\Database::connect();
+		$builder="SELECT idUporabnik,imeUporabnik,priimekUporabnik,emailUporabnik,nazivVloga FROM uporabnik LEFT JOIN Vloga ON Vloga_idVloga=idVloga WHERE idUporabnik=".$idUporabnik;
+		$query = $db->query($builder);
+		$results=$query->getResult();
+		return $results;
+	}
 
-
-	protected $useAutoIncrement = true;
-
-
-	protected $returnType = 'array';
-
-
-	protected $allowedFiels = ['imeUporabnik', 'priimekUporabnik', 'emailUporabnik', 'gesloUporabnik', 'Vloga_idVloga'];
-
-
-
+	public function vloga_get()
+	{
+		$db = \Config\Database::connect();
+		$builder="SELECT * FROM Vloga";
+		$query = $db->query($builder);
+		$results=$query->getResult();
+		return $results;
+	}
 
 
 
