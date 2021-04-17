@@ -60,10 +60,12 @@
 	<?php
 		foreach($zapiski as $zapisek){
 			echo '<div class="izpisek">
+					<div class="izpisek_vsebina_2">
 					<h3>'.trim($zapisek->naslovZapisek).'</a></h3> 
 					<p>'.$zapisek->nazivPredmet. ", ".$zapisek->imeUporabnik.' '.$zapisek->priimekUporabnik.', '.$zapisek->datumZapisek.'</p>
 					<p>'.$zapisek->imeDijak.' '.$zapisek->priimekDijak.', '. $zapisek->nazivRazred.'</p>
 					<p class="zapisek_vsebina">'.$zapisek->vsebinaZapisek.'</p>
+					</div>
 					<a href="'.base_url().'/zapisek_pregled/index/'.$zapisek->idZapisek.'"><button class="btn btn-success">Preglej</button></a>
 				</div>';
 		}

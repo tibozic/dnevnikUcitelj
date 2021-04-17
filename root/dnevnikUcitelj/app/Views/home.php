@@ -58,7 +58,7 @@
 			?>
 	<?php
 		}
-		else if (session()->get('vlogaUporabnik') == "Razrednik" && isset($razred_naziv[0]) || session()->get('vlogaUporabnik') == "Učitelj")
+		if (session()->get('vlogaUporabnik') == "Razrednik" || session()->get('vlogaUporabnik') == "Učitelj")
 		{
 	?>
 
@@ -249,7 +249,7 @@
 		}
 	<?php
 		}
-		if (session()->get('vlogaUporabnik') == 'Učitelj')
+		if (session()->get('vlogaUporabnik') == 'Učitelj' || session()->get('vlogaUporabnik') == "Razrednik")
 		{
 	?>
 	function drawChartUcitelj() {

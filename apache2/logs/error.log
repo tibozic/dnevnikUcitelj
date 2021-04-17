@@ -1,5 +1,5 @@
-[Thu Apr 15 17:55:28.516611 2021] [mpm_winnt:notice] [pid 4012:tid 616] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
-[Thu Apr 15 17:55:28.516611 2021] [mpm_winnt:notice] [pid 4012:tid 616] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
-[Thu Apr 15 17:55:28.516611 2021] [core:notice] [pid 4012:tid 616] AH00094: Command line: 'C:\\Users\\garry\\Desktop\\zakljucna/apache2/bin/httpd_usbwv8.exe -d C:/Users/garry/Desktop/zakljucna/apache2'
-[Thu Apr 15 17:55:28.519657 2021] [mpm_winnt:notice] [pid 4012:tid 616] AH00418: Parent: Created child process 10760
-[Thu Apr 15 17:55:29.201113 2021] [mpm_winnt:notice] [pid 10760:tid 688] AH00354: Child: Starting 64 worker threads.
+[Sat Apr 17 17:53:52.324462 2021] [mpm_winnt:notice] [pid 2580:tid 628] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
+[Sat Apr 17 17:53:52.325524 2021] [mpm_winnt:notice] [pid 2580:tid 628] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
+[Sat Apr 17 17:53:52.325524 2021] [core:notice] [pid 2580:tid 628] AH00094: Command line: 'C:\\Users\\garry\\Desktop\\zakljucna/apache2/bin/httpd_usbwv8.exe -d C:/Users/garry/Desktop/zakljucna/apache2'
+[Sat Apr 17 17:53:52.347825 2021] [mpm_winnt:notice] [pid 2580:tid 628] AH00418: Parent: Created child process 10580
+[Sat Apr 17 17:53:52.953977 2021] [mpm_winnt:notice] [pid 10580:tid 684] AH00354: Child: Starting 64 worker threads.

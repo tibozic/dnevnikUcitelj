@@ -16,11 +16,7 @@
   		if(session()->get('vlogaUporabnik') == 'Administrator' || session()->get('vlogaUporabnik') == 'Ravnatelj'){
 			echo "
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/vnos'>Nov zapisek </a></li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_moji'>Moji Zapiski </a></li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisZapiskov_razred'>Zapiski Razreda</a></li>
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/administracija'>Administracija </a></li>
-				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/izpisDijakov'>Dijaki </a></li>
 				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
 
   			";
