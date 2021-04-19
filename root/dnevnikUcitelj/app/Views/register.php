@@ -28,7 +28,7 @@
 				<label for="potrdi_geslo">Potrdi geslo: </label><br>
 				<input id="potrdi_geslo" name="potrdi_geslo" type="password">
 				<br><br>
-				<button type="submit" class="btn-primary">Registriraj</button>
+				<button type="submit" class="btn btn-primary">Registriraj</button>
 			</form><br><br>
 		<?php if (isset($validation)): ?>
 			<div class="register_error" role="alert">
