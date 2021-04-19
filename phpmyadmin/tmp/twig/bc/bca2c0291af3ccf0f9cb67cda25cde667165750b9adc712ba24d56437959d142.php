@@ -790,6 +790,6 @@ $context["database"], "name", [], "any", false, false, false, 239)]);
 
     public function getSourceContext()
     {
-        return new Source("", "server/databases/index.twig", "C:\\Users\\Jacob\\Desktop\\zakljucnaVse\\zakljucna\\phpmyadmin\\templates\\server\\databases\\index.twig");
+        return new Source("", "server/databases/index.twig", "C:\\Users\\garry\\Desktop\\zakljucna\\phpmyadmin\\templates\\server\\databases\\index.twig");
     }
 }

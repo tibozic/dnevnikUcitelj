@@ -9,7 +9,7 @@ class AuthAdmin implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Preusmeritev uporabnika, ki ni administrator (preprečitev dostopa do administartivnih funkcji)
-        if(session()->get('jePrijavljen') == false || session()->get('vlogaUporabnik') != 'Administrator'){
+        if(session()->get('jePrijavljen') == false || session()->get('vlogaUporabnik') != 'Administrator' && session()->get('vlogaUporabnik') != 'Ravnatelj'){
         	return redirect()->to(base_url("home"));
         }
     }

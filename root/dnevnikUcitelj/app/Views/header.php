@@ -33,7 +33,7 @@
 
   			";
 		}
-		else
+		else if (session()->get('vlogaUporabnik') == 'Učitelj')
 		{
 			echo "
 				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
@@ -43,6 +43,13 @@
 
   			";
   		}
+		else
+		{
+			echo "
+				<li> <a class='nav-link menu_vsebina_text' href='".base_url()."/home'>Domov </a> </li>
+				<li id='logout'><a class='nav-link menu_vsebina_text' href='".base_url()."/home/odjava'>Odjava </a></li>
+  			";
+		}
   	?>
   </ul>
 </nav><br>

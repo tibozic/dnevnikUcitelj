@@ -33,7 +33,7 @@ class Database extends \CodeIgniter\Database\Config
 		'DSN'      => '',
 		'hostname' => 'localhost',
 		'username' => 'root',
-		'password' => 'usbw',
+		'password' => 'zakljucna_2021_bozic',
 		'database' => 'uciteljDnevnik',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
