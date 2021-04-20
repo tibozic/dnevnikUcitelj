@@ -1,6 +1,5 @@
-[Mon Apr 19 18:23:34.340153 2021] [mpm_winnt:notice] [pid 8408:tid 612] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
-[Mon Apr 19 18:23:34.341169 2021] [mpm_winnt:notice] [pid 8408:tid 612] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
-[Mon Apr 19 18:23:34.341169 2021] [core:notice] [pid 8408:tid 612] AH00094: Command line: 'C:\\Users\\garry\\Desktop\\zakljucna/apache2/bin/httpd_usbwv8.exe -d C:/Users/garry/Desktop/zakljucna/apache2'
-[Mon Apr 19 18:23:34.348214 2021] [mpm_winnt:notice] [pid 8408:tid 612] AH00418: Parent: Created child process 4556
-[Mon Apr 19 18:23:35.364708 2021] [mpm_winnt:notice] [pid 4556:tid 660] AH00354: Child: Starting 64 worker threads.
-[Mon Apr 19 18:28:42.237482 2021] [php7:error] [pid 4556:tid 1136] [client 127.0.0.1:65033] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\garry\\Desktop\\zakljucna\\root\\dnevnikUcitelj\\system\\Database\\ResultInterface.php on line 265, referer: http://localhost/register
+[Tue Apr 20 14:38:51.012447 2021] [mpm_winnt:notice] [pid 5244:tid 648] AH00455: Apache/2.4.41 (Win32) PHP/7.4.3 configured -- resuming normal operations
+[Tue Apr 20 14:38:51.012447 2021] [mpm_winnt:notice] [pid 5244:tid 648] AH00456: Apache Lounge VS16 Server built: Aug  9 2019 16:32:28
+[Tue Apr 20 14:38:51.012447 2021] [core:notice] [pid 5244:tid 648] AH00094: Command line: 'E:\\zakljucna/apache2/bin/httpd_usbwv8.exe -d E:/zakljucna/apache2'
+[Tue Apr 20 14:38:51.052099 2021] [mpm_winnt:notice] [pid 5244:tid 648] AH00418: Parent: Created child process 10732
+[Tue Apr 20 14:38:53.995710 2021] [mpm_winnt:notice] [pid 10732:tid 232] AH00354: Child: Starting 64 worker threads.

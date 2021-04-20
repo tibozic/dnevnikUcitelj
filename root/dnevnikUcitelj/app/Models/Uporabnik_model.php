@@ -23,6 +23,22 @@ class Uporabnik_model extends Model
 		return $results;
 	}
 
+	public function uporabnik_shrani($podatki)
+	{
+		$db = \Config\Database::connect();
+
+
+		$builder = $db->table('uporabnik');
+		$builder->set('imeUporabnik', $podatki['ime']);
+		$builder->set('priimekUporabnik', $podatki['priimek']);
+		$builder->set('emailUporabnik', $podatki['email']);
+		$builder->set('Vloga_idVloga', $podatki['vloga']);
+		$builder->where('idUporabnik', $podatki['uporabnik']);
+		$builder->update();
+
+
+
+	}
 
 
 }

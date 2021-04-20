@@ -43,26 +43,17 @@ class UrejanjeUporabnika extends BaseController
 
 		*/
 
-		$db = \Config\Database::connect();
-
-		/*
-		$builder="UPDATE uporabnik SET imeUporabnik='".$_POST['ime']."', priimekUporabnik='".$_POST['priimek']."', emailUporabnik='".$_POST['email']."', Vloga_idVloga='".$_POST['vloga']."' WHERE idUporabnik=".$idUporabnik.";";
-
-		//echo $builder;
-		$query = $db->query($builder);
-		$results=$query->getResult();
-		*/
+		$uporabnik_model = new Uporabnik_model();
 		
-		$builder = $db->table('uporabnik');
-		$builder->set('imeUporabnik', $_POST['ime']);
-		$builder->set('priimekUporabnik', $_POST['priimek']);
-		$builder->set('emailUporabnik', $_POST['email']);
-		$builder->set('Vloga_idVloga', $_POST['vloga']);
-		$builder->where('idUporabnik', $idUporabnik);
-		$builder->update();
+		$podatki = [
+			'ime' => $_POST['ime'],
+			'priimek' => $_POST['priimek'],
+			'email' => $_POST['email'],
+			'vloga' => $_POST['vloga'],
+			'uporabnik' => $idUporabnik,
+		];
 
-
-
+		$uporabnik_model->uporabnik_shrani($podatki);
 
 
 		return redirect()->to(base_url('administracija'));
