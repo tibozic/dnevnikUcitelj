@@ -1,5 +1,5 @@
 # Spletna aplikacija za formativno spremljanje dijakovega napredka
-Timotej Božič, 4.c
+Timotej Božič, 4.c <br>
 Ta aplikacija je bila razvita kot projekt zaključne naloge srednje računalniške šole.
 
 Aplikacija je zasnovana kot spletno orodje za izboljšanje komunikacije med učitelji in dijaki ter za učinkovitejše spremljanje učnega napredka dijakov. Namenjena je predvsem učiteljem in razrednikom, ki želijo imeti enostaven in pregleden način beleženja aktivnosti dijakov, kar jim omogoča boljše prilagajanje potrebam posameznega dijaka in boljšo podporo pri učenju.
