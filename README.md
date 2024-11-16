@@ -4,6 +4,16 @@ Ta aplikacija je bila razvita kot projekt zaključne naloge srednje računalniš
 
 Aplikacija je zasnovana kot spletno orodje za izboljšanje komunikacije med učitelji in dijaki ter za učinkovitejše spremljanje učnega napredka dijakov. Namenjena je predvsem učiteljem in razrednikom, ki želijo imeti enostaven in pregleden način beleženja aktivnosti dijakov, kar jim omogoča boljše prilagajanje potrebam posameznega dijaka in boljšo podporo pri učenju.
 
+## Tehnologije
+- HTML
+- CSS
+- PHP
+- Javascript
+- MySQL
+- Bootstrap
+- CodeIgniter
+
+
 ## Ključne funkcionalnosti
 1. Spremljanje aktivnosti dijakov:
 - Aplikacija omogoča učiteljem, da spremljajo projekte in naloge, ki jih dijaki izvajajo v okviru učnega programa. Učitelj lahko ob vsakem projektu zabeleži posameznikovo sodelovanje, napredek, posebnosti ali težave, s katerimi se dijak sooča.
