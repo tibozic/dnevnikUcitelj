@@ -25,7 +25,7 @@ It is primarily intended for teachers who wish to have a simple and transparent 
 5. **User Management for Administrators:**  
    - Administrators have access to user settings and can manage user permissions (assign roles, add or remove users). They ensure that permissions are aligned with the needs of teachers, class teachers, and other application users.  
 
-## Application Advantages  
+## Advantages  
 1. **Centralized Progress Overview:**  
    - The application provides teachers and class teachers with centralized access to all student projects and assignments, making it much easier to track their progress.  
 2. **Better Communication and Adaptation:**  
@@ -33,7 +33,7 @@ It is primarily intended for teachers who wish to have a simple and transparent 
 3. **Simplification of Administrative Work:**  
    - The application reduces the amount of administrative work by organizing all information about students and projects in one place, allowing teachers to access data quickly and track progress efficiently.  
 
-## Application Goal  
+## Goal  
 The main goal of the application is to improve the overview of student activities and progress and allow teachers to effectively monitor projects. This encourages better collaboration between teachers and students and allows for the timely recognition of issues, with teachers being able to adjust their support to improve academic results.
 
 The individual sections of the web application are explained in the final assignment report:  
