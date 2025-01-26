@@ -4,6 +4,10 @@ This application was developed as a project for the final assignment in a high s
 The application is designed as an online app to improve communication between teachers and students and to more effectively monitor students' academic progress. 
 It is primarily intended for teachers who wish to have a simple and transparent way of recording student activities, enabling them to better adapt to the needs of individual students and provide better learning support.
 
+<p align="center">  
+  <img src="images/domaca_stran.png">  
+</p>  
+
 ## Technologies  
 - HTML  
 - CSS  
@@ -41,3 +45,34 @@ The individual sections of the web application are explained in the final assign
 
 Video of the functionality:  
 https://user-images.githubusercontent.com/63909145/126004193-3ca912c0-0b60-4673-b14e-5c88de178f0f.mp4
+
+## Images
+
+<p align="center">  
+  <img src="images/domaca_stran.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/izpiski_razreda.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/podatki_dijaka.png">  
+</p>  
+
+<p align="center">    
+  <img src="images/podatki_dijaka3.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/pregled_zapiska.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/ustvarjanje_zapiska.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/izpis_dijakov.png">  
+</p>  
+
