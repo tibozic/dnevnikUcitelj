@@ -4,6 +4,10 @@ Ta aplikacija je bila razvita kot projekt zaključne naloge srednje računalniš
 
 Aplikacija je zasnovana kot spletno orodje za izboljšanje komunikacije med učitelji in dijaki ter za učinkovitejše spremljanje učnega napredka dijakov. Namenjena je predvsem učiteljem in razrednikom, ki želijo imeti enostaven in pregleden način beleženja aktivnosti dijakov, kar jim omogoča boljše prilagajanje potrebam posameznega dijaka in boljšo podporo pri učenju.
 
+<p align="center">  
+  <img src="images/domaca_stran.png">  
+</p>  
+
 ## Tehnologije
 - HTML
 - CSS
@@ -42,3 +46,32 @@ Posamezni deli spletne aplikacije so razloženi v poročilu zaključne naloge:
 Video delovanja:
 https://user-images.githubusercontent.com/63909145/126004193-3ca912c0-0b60-4673-b14e-5c88de178f0f.mp4
 
+## Slike
+
+<p align="center">  
+  <img src="images/domaca_stran.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/izpiski_razreda.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/podatki_dijaka.png">  
+</p>  
+
+<p align="center">    
+  <img src="images/podatki_dijaka3.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/pregled_zapiska.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/ustvarjanje_zapiska.png">  
+</p>  
+
+<p align="center">  
+  <img src="images/izpis_dijakov.png">  
+</p>  
